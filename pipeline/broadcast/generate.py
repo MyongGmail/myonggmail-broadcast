@@ -10,7 +10,7 @@ docs/BROADCAST_FORMAT.md §2의 라인 포맷을 구현한다:
   비K2Web 채널은 template=null — 행 코드는 식별용(crc32 base36)이고 앱은 채널 대표
   board_url로 폴백한다(원문 직링크 대신 게시판 랜딩 — v0의 문서화된 절충).
 
-사용:  python3 -m pipeline.broadcast.generate [--input 경로] [--out 디렉터리] [--verify]
+사용:  python3 -m pipeline.broadcast.generate [--input 경로] [--fresh 경로] [--out 디렉터리] [--verify]
 """
 from __future__ import annotations
 
@@ -25,6 +25,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = REPO / "packages/shared/data/notices_v2.json"
+DEFAULT_FRESH = REPO / "pipeline/snapshots/parsed/notices_v2.json"
 DEFAULT_OUT = REPO / "pipeline/broadcast/out"
 
 DICT_VERSION = "d1"
@@ -69,9 +70,29 @@ def row_date(row: dict) -> str | None:
     return row.get("date") or (row.get("scraped_at") or "")[:10] or None
 
 
-def build(input_path: Path, out_dir: Path) -> dict:
-    rows = json.loads(input_path.read_text(encoding="utf-8"))
+def load_rows(input_path: Path, fresh_path: Path | None) -> list[dict]:
+    """기저(번들 코퍼스) ∪ 신선 오버레이(크롤 병합 산출) — dedup_key 기준, 오버레이 우선.
 
+    공개 레포(C3)에는 snapshots/가 없어 오버레이는 Actions 캐시에 누적된 최근 스캔분뿐이다 —
+    기저를 버리고 교체하면 방송이 코퍼스를 잃는다. 그래서 교체가 아니라 병합.
+    캐시 증발 시 오버레이가 작아질 뿐 기저 이하로 줄지 않고, 일요일 backfill이 매주 재적재한다.
+    """
+    base = json.loads(input_path.read_text(encoding="utf-8"))
+    merged = {r["dedup_key"]: r for r in base}
+    if fresh_path is not None and fresh_path.exists() and fresh_path.resolve() != input_path.resolve():
+        fresh = json.loads(fresh_path.read_text(encoding="utf-8"))
+        new_n = sum(1 for r in fresh if r["dedup_key"] not in merged)
+        merged.update({r["dedup_key"]: r for r in fresh})
+        fresh_note = f"신선 {len(fresh)}행(신규 {new_n})"
+    else:
+        fresh_note = "신선 없음(스킵)"
+    rows = list(merged.values())
+    max_scraped = max((r.get("scraped_at") or "" for r in rows), default="")
+    print(f"input: 기저 {len(base)}행 + {fresh_note} → 병합 {len(rows)}행, max_scraped={max_scraped or '?'}")
+    return rows
+
+
+def build(rows: list[dict], out_dir: Path) -> dict:
     # 채널 사전: 정렬 키 → 2자 base36 코드(결정적). 템플릿은 채널 내 K2 URL에서 유도.
     channel_keys = sorted({r["channel_key"] for r in rows})
     if len(channel_keys) > 36 * 36:
@@ -129,13 +150,12 @@ def build(input_path: Path, out_dir: Path) -> dict:
     }
 
 
-def verify(out_dir: Path, input_path: Path) -> None:
-    """왕복 검증: 파싱 복원 + K2 URL 재조립이 원본과 일치하는지 표본 검사."""
+def verify(out_dir: Path, rows: list[dict]) -> None:
+    """왕복 검증: 파싱 복원 + K2 URL 재조립이 원본(병합 입력)과 일치하는지 표본 검사."""
     text = (out_dir / "latest.txt").read_text(encoding="utf-8").rstrip("\n").split("\n")
     header = text[0].split("|")
     assert header[0] == FORMAT_VERSION and header[1] == DICT_VERSION, "헤더 불일치"
     dictionary = json.loads((out_dir / f"dict_{DICT_VERSION}.json").read_text(encoding="utf-8"))
-    rows = json.loads(input_path.read_text(encoding="utf-8"))
     by_key: dict[tuple, dict] = {}
     for r in rows:
         m = K2_URL.match(r.get("url") or "")
@@ -160,13 +180,16 @@ def verify(out_dir: Path, input_path: Path) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description="방송 파일 v0 생성")
     ap.add_argument("--input", type=Path, default=DEFAULT_INPUT)
+    ap.add_argument("--fresh", type=Path, default=DEFAULT_FRESH,
+                    help="크롤 병합 산출 오버레이 — 부재 시 기저만으로 생성")
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
     ap.add_argument("--verify", action="store_true")
     args = ap.parse_args()
-    stats = build(args.input, args.out)
+    rows = load_rows(args.input, args.fresh)
+    stats = build(rows, args.out)
     print(json.dumps(stats, ensure_ascii=False))
     if args.verify:
-        verify(args.out, args.input)
+        verify(args.out, rows)
 
 
 if __name__ == "__main__":
