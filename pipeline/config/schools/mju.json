@@ -1,0 +1,531 @@
+{
+  "$comment": "명지메일 채널 레지스트리 — 2026-07-18 전수조사(30종) 기반. 새 채널 추가 = 여기에 행 추가(코드 수정 불필요). strategy는 pipeline/crawler/v2/adapters/ 의 어댑터 이름.",
+  "school": {
+    "id": "mju",
+    "name": "명지대학교",
+    "email_domains": [
+      "mju.ac.kr"
+    ],
+    "campuses": [
+      "인문",
+      "자연"
+    ]
+  },
+  "defaults": {
+    "request_delay_sec": 1.2,
+    "timeout_sec": 20,
+    "user_agent": "MyongGmailBot/0.2 (+university notice aggregation, student project; contact: canvas0420@mju.ac.kr)"
+  },
+  "department_registry": "mju.departments.json",
+  "channels": [
+    {
+      "key": "mjukr-255",
+      "name": "일반공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "mixed",
+      "operator": "본부",
+      "params": {
+        "site": "mjukr",
+        "menu_id": "255"
+      },
+      "media_group": "official"
+    },
+    {
+      "key": "mjukr-256",
+      "name": "행사공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "events",
+      "operator": "본부",
+      "params": {
+        "site": "mjukr",
+        "menu_id": "256",
+        "allow_empty": true
+      },
+      "note": "상시 0건에 가까운 게시판(행사류는 255/260에 흡수) — 빈 결과 정상",
+      "media_group": "official"
+    },
+    {
+      "key": "mjukr-257",
+      "name": "학사공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "academics",
+      "operator": "본부",
+      "params": {
+        "site": "mjukr",
+        "menu_id": "257"
+      },
+      "media_group": "official"
+    },
+    {
+      "key": "mjukr-259",
+      "name": "장학/학자금공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "scholarship",
+      "operator": "본부",
+      "params": {
+        "site": "mjukr",
+        "menu_id": "259"
+      },
+      "media_group": "official"
+    },
+    {
+      "key": "mjukr-260",
+      "name": "진로/취업/창업공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "career",
+      "operator": "본부",
+      "params": {
+        "site": "mjukr",
+        "menu_id": "260"
+      },
+      "media_group": "official"
+    },
+    {
+      "key": "mjukr-261",
+      "name": "입찰공고",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "procurement",
+      "operator": "본부",
+      "params": {
+        "site": "mjukr",
+        "menu_id": "261"
+      },
+      "media_group": "official"
+    },
+    {
+      "key": "mjukr-4450",
+      "name": "학칙개정 사전공고",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "admin",
+      "operator": "본부",
+      "params": {
+        "site": "mjukr",
+        "menu_id": "4450"
+      },
+      "media_group": "official"
+    },
+    {
+      "key": "mjukr-5364",
+      "name": "학생활동공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "activities",
+      "operator": "본부",
+      "params": {
+        "site": "mjukr",
+        "menu_id": "5364"
+      },
+      "media_group": "official"
+    },
+    {
+      "key": "mjukr-8972",
+      "name": "대학안전공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "admin",
+      "operator": "본부",
+      "params": {
+        "site": "mjukr",
+        "menu_id": "8972"
+      },
+      "media_group": "official"
+    },
+    {
+      "key": "innov",
+      "name": "대학혁신지원사업 공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "events",
+      "operator": "대학혁신지원사업단",
+      "params": {
+        "site": "innovation",
+        "menu_id": "1090"
+      },
+      "media_group": "orgs"
+    },
+    {
+      "key": "ctl",
+      "name": "교수학습센터(CTL) 공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "events",
+      "operator": "교수학습센터",
+      "params": {
+        "site": "ctl",
+        "menu_id": "5259"
+      },
+      "media_group": "orgs"
+    },
+    {
+      "key": "cap",
+      "name": "교육인증센터 공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "events",
+      "operator": "교육인증센터(MYiCAP+ 운영)",
+      "params": {
+        "site": "cap",
+        "menu_id": "6522"
+      },
+      "media_group": "orgs"
+    },
+    {
+      "key": "startup",
+      "name": "창업교육센터 공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "career",
+      "operator": "창업교육센터",
+      "params": {
+        "site": "startup",
+        "menu_id": "3240"
+      },
+      "media_group": "orgs"
+    },
+    {
+      "key": "mjupsc",
+      "name": "사회봉사단 공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "events",
+      "operator": "사회봉사단",
+      "params": {
+        "site": "mjupsc",
+        "menu_id": "9894"
+      },
+      "media_group": "orgs"
+    },
+    {
+      "key": "sangdam",
+      "name": "학생상담센터 공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "life",
+      "operator": "학생상담센터",
+      "params": {
+        "site": "sangdam",
+        "fnct_no": "663"
+      },
+      "media_group": "orgs"
+    },
+    {
+      "key": "humanrights",
+      "name": "인권센터 공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "admin",
+      "operator": "인권센터",
+      "params": {
+        "site": "humanrights",
+        "menu_id": "8578"
+      },
+      "media_group": "orgs"
+    },
+    {
+      "key": "bangmok",
+      "name": "방목기초교육대학 공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "academics",
+      "operator": "방목기초교육대학",
+      "params": {
+        "site": "bangmok",
+        "menu_id": "1681"
+      },
+      "media_group": "colleges"
+    },
+    {
+      "key": "dorm",
+      "name": "생활관 공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "life",
+      "operator": "생활관",
+      "params": {
+        "site": "dorm",
+        "menu_id": "6729"
+      },
+      "media_group": "orgs"
+    },
+    {
+      "key": "job-mju",
+      "name": "진로/취업정보시스템 공지",
+      "strategy": "k2web",
+      "enabled": false,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "취창업지원처",
+      "note": "2021년 이후 정체 + menu_id 미확정 — 분기 1회 수동 점검으로 대체",
+      "params": {
+        "site": "job"
+      },
+      "media_group": "jobs"
+    },
+    {
+      "key": "mjujob",
+      "name": "MJ대학일자리플러스센터",
+      "strategy": "mjujob",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "career",
+      "operator": "MJ대학일자리플러스센터",
+      "params": {
+        "host": "www.mjujob.ac.kr",
+        "codes": [
+          "notice",
+          "notice2"
+        ]
+      },
+      "media_group": "jobs"
+    },
+    {
+      "key": "international",
+      "name": "국제교류처 공지",
+      "strategy": "international_php",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "academics",
+      "operator": "국제교류처",
+      "params": {
+        "host": "international.mju.ac.kr",
+        "boards": [
+          {
+            "sMenu": "kor23",
+            "tname": "enter",
+            "label": "국제교류처 선발 공지"
+          },
+          {
+            "sMenu": "kor32",
+            "tname": "notice",
+            "label": "공지사항"
+          },
+          {
+            "sMenu": "kor61",
+            "tname": "info",
+            "label": "교내공지"
+          }
+        ]
+      },
+      "media_group": "orgs"
+    },
+    {
+      "key": "future",
+      "name": "미래융합대학 공지",
+      "strategy": "gnuboard",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "academics",
+      "operator": "미래융합대학",
+      "params": {
+        "host": "future.mju.ac.kr",
+        "bo_table": "notice"
+      },
+      "media_group": "colleges"
+    },
+    {
+      "key": "intern",
+      "name": "현장실습지원센터 공지",
+      "strategy": "intern",
+      "enabled": true,
+      "priority": "high",
+      "category_hint": "career",
+      "operator": "현장실습지원센터",
+      "params": {
+        "host": "intern.mju.ac.kr"
+      },
+      "media_group": "jobs"
+    },
+    {
+      "key": "lib",
+      "name": "도서관 공지",
+      "strategy": "pyxis",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "life",
+      "operator": "중앙도서관",
+      "params": {
+        "host": "lib.mju.ac.kr",
+        "board_id": 1,
+        "max": 20
+      },
+      "media_group": "orgs"
+    },
+    {
+      "key": "ddingdong",
+      "name": "띵동(동아리 모집)",
+      "strategy": "ddingdong",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "activities",
+      "operator": "총동아리연합회",
+      "params": {
+        "host": "ddingdong.mju.ac.kr"
+      },
+      "media_group": "clubs"
+    },
+    {
+      "key": "youtube",
+      "name": "공식 유튜브",
+      "strategy": "rss",
+      "enabled": false,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "홍보팀",
+      "params": {
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCYuO1dJiQ_MSCrOEO8UmzDA"
+      },
+      "note": "robots.txt가 봇 수집을 차단 — 준수 원칙에 따라 비활성. 원본은 웹게시판에 중복 게재됨(전수조사 실증). 공식 API 경유는 후속 검토",
+      "media_group": "sns"
+    },
+    {
+      "key": "naver-blog",
+      "name": "공식 네이버 블로그",
+      "strategy": "rss",
+      "enabled": false,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "홍보팀",
+      "params": {
+        "url": "https://rss.blog.naver.com/mjupr.xml"
+      },
+      "note": "robots.txt가 봇 수집을 차단 — 준수 원칙에 따라 비활성. 원본은 웹게시판에 중복 게재됨(전수조사 실증). 공식 API 경유는 후속 검토",
+      "media_group": "sns"
+    },
+    {
+      "key": "ngscc",
+      "name": "차세대반도체 컨소시엄",
+      "strategy": "generic_list",
+      "enabled": false,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "외부 컨소시엄(공학교육혁신센터 참여)",
+      "note": "역추적에서 발견된 외부 사업단 유형 — W1 범위 밖, 어댑터 후속 개발",
+      "params": {
+        "host": "ngscc.kr",
+        "list_url": "https://ngscc.kr/sub/sub04_01.php?boardid=notice"
+      },
+      "media_group": "external"
+    },
+    {
+      "key": "seoul-youth",
+      "name": "서울 청년몽땅정보통 교차게시",
+      "strategy": "generic_list",
+      "enabled": false,
+      "priority": "low",
+      "category_hint": "contest",
+      "operator": "서울시",
+      "note": "명지대 프로그램 교차게시 확인됨 — W1 범위 밖, keyWord=명지 검색 크롤 후속 개발",
+      "params": {
+        "host": "youth.seoul.go.kr"
+      },
+      "media_group": "external"
+    },
+    {
+      "key": "naver-cafe-law",
+      "name": "법학과 학생회 카페",
+      "strategy": "naver_cafe",
+      "enabled": false,
+      "priority": "low",
+      "category_hint": "activities",
+      "operator": "학생회",
+      "note": "네이버 카페 목록 API — 본문은 가입 필요. 후속 검토",
+      "params": {
+        "club": "mjcollegeoflaw"
+      },
+      "media_group": "community"
+    }
+  ],
+  "media_groups": [
+    {
+      "key": "official",
+      "label": "학교 공지",
+      "desc": "본부 공지 게시판 9종 (www.mju.ac.kr)"
+    },
+    {
+      "key": "orgs",
+      "label": "부속기관·센터",
+      "desc": "혁신사업단·CTL·교육인증센터·창업·봉사단·상담·인권·국제교류처·도서관·생활관"
+    },
+    {
+      "key": "colleges",
+      "label": "단과대·학과",
+      "desc": "단과대학 13곳 + 학과 게시판 + 전공자율선택(majorfree)"
+    },
+    {
+      "key": "jobs",
+      "label": "취업 전용",
+      "desc": "MJ대학일자리플러스센터·현장실습지원센터·취업정보시스템"
+    },
+    {
+      "key": "myicap",
+      "label": "MYiCAP+",
+      "desc": "비교과 신청 허브 (로그인벽 — 앱은 바로가기 + 주간 모니터링, 단독 게재율 22.5~30% 실측)"
+    },
+    {
+      "key": "clubs",
+      "label": "동아리",
+      "desc": "띵동 (총동아리연합회)"
+    },
+    {
+      "key": "sns",
+      "label": "SNS",
+      "desc": "인스타그램 계정군 + 유튜브(@mjuniv·@명지내일·미래융합대·도서관) + 네이버 블로그"
+    },
+    {
+      "key": "kakao",
+      "label": "카카오톡",
+      "desc": "공식/부서 채널 + 알림톡 + 학과 오픈채팅"
+    },
+    {
+      "key": "external",
+      "label": "외부·공공",
+      "desc": "사업단 컨소시엄(ngscc 등)·서울 청년몽땅·링커리어류"
+    },
+    {
+      "key": "notify",
+      "label": "(보조) 개별통보",
+      "desc": "이메일·SMS — 발견 매체 아님",
+      "aux": true
+    },
+    {
+      "key": "community",
+      "label": "(보조) 비공식 커뮤니티",
+      "desc": "에브리타임·학생회 네이버 카페",
+      "aux": true
+    },
+    {
+      "key": "offline",
+      "label": "(보조) 오프라인",
+      "desc": "포스터·현수막",
+      "aux": true
+    }
+  ],
+  "extra_registries": [
+    "mju.discovered.json"
+  ]
+}

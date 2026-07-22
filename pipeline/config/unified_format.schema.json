@@ -1,0 +1,313 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://myonggmail.example/schemas/unified_format.schema.json",
+  "title": "명지메일 통합 양식 v1 (Unified Notice Format)",
+  "description": "모든 공고문을 담는 단일 양식. 균질화 소프트웨어의 출력 정의와 동일하며 소프트웨어 2(노션+LLM)·3(방송)·4(노션) 공용. 필드 구성 근거: docs/research/R7_unified_format.md (코퍼스 출현율 통계).",
+  "type": "object",
+  "required": [
+    "format_version",
+    "id",
+    "title",
+    "url",
+    "category",
+    "published_date",
+    "source",
+    "attachments"
+  ],
+  "properties": {
+    "format_version": {
+      "type": "string",
+      "const": "1.0",
+      "$comment": "양식 버전. 마이그레이션 트리거용."
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "전역 유일 키 = school_id + ':' + dedup_key. 출현율 100%(크롤러 필수 필드).",
+      "examples": [
+        "mju:k2web:dcd:1118:233676"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "공고 제목. 출현율 100%. 방송(3번) 와이어 포맷의 유일한 자연어 잔여."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "$comment": "원문 링크. 출현율 100%."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "academics",
+        "scholarship",
+        "career",
+        "contest",
+        "events",
+        "activities",
+        "life",
+        "admin",
+        "procurement",
+        "mixed"
+      ],
+      "$comment": "채널 유래 분류(category_hint 상속). 출현율 100%. 균질화 계층이 본문 기반으로 mixed를 재분류할 수 있음."
+    },
+    "published_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "$comment": "게시일 YYYY-MM-DD. 출현율 99.0%(3001건 중) — 필수 키이되 null 허용(날짜 결손 채널)."
+    },
+    "campus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "인문",
+        "자연",
+        null
+      ],
+      "$comment": "제목 [인문]/[자연] 접두 유래. 출현율 3.0% — 선택(null 기본)."
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "school_id",
+        "channel_key",
+        "scraped_at"
+      ],
+      "$comment": "수집 출처 메타. 전 필드 크롤러가 항상 제공.",
+      "properties": {
+        "school_id": {
+          "type": "string",
+          "$comment": "학교 식별자. 100%. L2 공용 풀은 'shared'."
+        },
+        "channel_key": {
+          "type": "string",
+          "$comment": "채널 키(113채널). 100%."
+        },
+        "operator": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "$comment": "운영 주체(부서·학과명). 100%."
+        },
+        "scraped_at": {
+          "type": "string",
+          "format": "date-time",
+          "$comment": "수집 시각 UTC. 100%."
+        }
+      },
+      "additionalProperties": false
+    },
+    "body_text": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20000,
+      "$comment": "정규화 본문(clean_text 산출). 코퍼스 3,001건 중 518건(17.3%) 보유 — 결손은 원문 부재가 아니라 상세 수집 예산(detail-limit) 제약이며 백필로 증가. 방송(3번)은 이 필드를 전송하지 않음."
+    },
+    "summary": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 600,
+      "$comment": "균질화 계층(LLM/규칙) 산출 요약. 크롤 단계에서는 항상 null — R2 균질화 실험의 출력 슬롯. 최대 600자."
+    },
+    "apply": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "$comment": "신청 정보 블록. 본문 보유 518건 기준: 마감 신호(기간·마감 표기) 39.6%, 블록 추출 성공 43.1%, 기간 파싱 25.5%, 신청 경로 판별 34.6%(MYiCAP 9.7%·MSI 6.2%·URL 18.3%). 신청형 공고가 아니면 null.",
+      "properties": {
+        "period_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date",
+          "$comment": "신청 시작일."
+        },
+        "period_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date",
+          "$comment": "신청 종료일."
+        },
+        "deadline": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date",
+          "$comment": "마감일(보통 period_end와 동일). 개인화 제안 모듈 S의 1차 정렬 키."
+        },
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "myicap",
+            "msi",
+            "web",
+            "email",
+            "offline",
+            null
+          ],
+          "$comment": "신청 경로: MYiCAP(비교과) / 종합정보시스템(MSI) / 외부 웹 / 이메일 / 방문. 본문 보유 건 34.6%에서 판별."
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri",
+          "$comment": "신청 링크(본문 첫 URL 휴리스틱)."
+        }
+      },
+      "additionalProperties": false
+    },
+    "target": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "$comment": "대상 정보. 본문 보유 518건 기준: 대상 신호(키워드∪라벨) 39.6%, 라벨(신청자격·모집대상 등) 25.1%, 신분 키워드 33.4%, 학년 명시 8.7%.",
+      "properties": {
+        "raw": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "$comment": "대상/자격 라벨 뒤 원문 절편(최대 80자)."
+        },
+        "statuses": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "재학생",
+              "휴학생",
+              "졸업예정자",
+              "신입생",
+              "편입생",
+              "대학원생",
+              "외국인유학생"
+            ]
+          },
+          "$comment": "신분 키워드 다중 선택."
+        },
+        "grades": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "$comment": "해당 학년 목록. 언급 없으면 null(전 학년 간주)."
+        }
+      },
+      "additionalProperties": false
+    },
+    "event": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "$comment": "행사 정보. 본문 보유 518건 기준: 일시 라벨 8.3%, 장소 라벨 7.9%, 블록 추출 11.0%. 행사형 공고가 아니면 null.",
+      "properties": {
+        "datetime_raw": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "$comment": "일시 원문 절편(형식 다양성 때문에 raw 보존)."
+        },
+        "place": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "$comment": "장소 원문 절편."
+        }
+      },
+      "additionalProperties": false
+    },
+    "contacts": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "phone": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "dept": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "maxItems": 10,
+      "$comment": "문의처. 본문 보유 518건 기준: 전화 53.5%, 이메일 31.5%, 문의 라벨 45.9%, 하나 이상 57.1%(추출 54.6%)."
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "url"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "additionalProperties": false
+      },
+      "$comment": "첨부 파일. 필수 키(빈 배열 허용). 본문 보유 518건 중 63.1% 첨부 존재 — 목록만 수집된 건은 첨부 미상이라 빈 배열."
+    },
+    "extra": {
+      "type": "object",
+      "$comment": "어댑터별 원시 부가 정보(site, fnct_no 등). 방송(3번) 링크 조립 씨앗."
+    }
+  },
+  "additionalProperties": false
+}

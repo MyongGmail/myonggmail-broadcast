@@ -1,0 +1,2735 @@
+{
+  "source": "discover_k2web (BFS from mjukr + registry seeds)",
+  "sites_total": 55,
+  "sites_fetched": 50,
+  "stats": {
+    "verified_new": 126,
+    "registered": 88
+  },
+  "requests": 286,
+  "failures": [],
+  "sites": {
+    "mjukr": {
+      "boards": [
+        {
+          "menu_id": "338",
+          "title": "정보공개",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "208",
+          "title": "인공지능·소프트웨어융합대학",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "409",
+          "title": "전산정보원",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "238",
+          "title": "모집과정 및 학과",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "241",
+          "title": "장학제도",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "244",
+          "title": "공지사항",
+          "status": "verified",
+          "fnct_no": "163"
+        },
+        {
+          "menu_id": "245",
+          "title": "모집과정 및 학과",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "248",
+          "title": "장학제도",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "257",
+          "title": "학사지원",
+          "status": "registered"
+        },
+        {
+          "menu_id": "257",
+          "title": "학사공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "255",
+          "title": "대학생활",
+          "status": "registered"
+        },
+        {
+          "menu_id": "255",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "255",
+          "title": "일반공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "256",
+          "title": "행사공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "259",
+          "title": "장학/학자금공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "260",
+          "title": "진로/취업/창업공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "5364",
+          "title": "학생활동공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "261",
+          "title": "입찰공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "8972",
+          "title": "대학안전공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "4450",
+          "title": "학칙개정 사전공고",
+          "status": "registered"
+        },
+        {
+          "menu_id": "292",
+          "title": "장학금",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "319",
+          "title": "아르바이트/취업",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "321",
+          "title": "전시회/공모전",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "145",
+          "title": "정보보호",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "145",
+          "title": "개인정보처리 방침",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "146",
+          "title": "제3자 정보제공 및 업무위탁 내역 게시판",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "149",
+          "title": "정보보호 뉴스",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "153",
+          "title": "영상정보처리기기 운영관리 방침",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "12056",
+          "title": "개인정보처리 방침(시행일자 : 2026.03.13)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "12020",
+          "title": "개인정보처리 방침(시행일자 : 2025.07.16)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "10884",
+          "title": "개인정보처리 방침(시행일자 : 2025.05.16)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "10803",
+          "title": "개인정보처리 방침(시행일자 : 2024.05.20)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "9641",
+          "title": "개인정보처리 방침(시행일자 : 2023.05.04)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "8966",
+          "title": "개인정보처리 방침(시행일자 : 2022.05.24)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "8116",
+          "title": "개인정보처리 방침(시행일자 : 2022.03.10)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "7847",
+          "title": "개인정보처리 방침(시행일자 : 2021.04.11)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "5202",
+          "title": "개인정보처리 방침(시행일자 : 2019.05.03)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "2586",
+          "title": "개인정보처리 방침(시행일자 : 2017.03.31)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "2587",
+          "title": "개인정보처리 방침(시행일자 : 2014.03.10)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "5203",
+          "title": "개인정보취급 방침",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "4357",
+          "title": "IBM산학협력프로그램",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "481",
+          "title": "교내장학금",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "482",
+          "title": "교외장학금",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "255",
+          "title": "더보기",
+          "status": "registered"
+        },
+        {
+          "menu_id": "9385",
+          "title": "Vol. 1063 명지뉴스레터",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "259",
+          "title": "장학금안내",
+          "status": "registered"
+        },
+        {
+          "menu_id": "145",
+          "title": "개인정보 처리방침",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "181",
+          "title": "예결산공고",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "141",
+        "143",
+        "145",
+        "146",
+        "147",
+        "166",
+        "167"
+      ]
+    },
+    "3e": {
+      "boards": [
+        {
+          "menu_id": "6086",
+          "title": "진로 및 취업",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6120",
+          "title": "커뮤니티",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6120",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6121",
+          "title": "취업게시판",
+          "status": "verified",
+          "fnct_no": "887"
+        },
+        {
+          "menu_id": "8098",
+          "title": "공모전·대외활동",
+          "status": "verified",
+          "fnct_no": "888"
+        },
+        {
+          "menu_id": "6547",
+          "title": "자유게시판",
+          "status": "verified",
+          "fnct_no": "933"
+        },
+        {
+          "menu_id": "6086",
+          "title": "졸업 후 진로",
+          "status": "not-board"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "884",
+        "887",
+        "888"
+      ]
+    },
+    "arab": {
+      "boards": [
+        {
+          "menu_id": "8479",
+          "title": "진로 및 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8470",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "8473",
+          "title": "사진게시판",
+          "status": "verified",
+          "fnct_no": "1279"
+        },
+        {
+          "menu_id": "8471",
+          "title": "자유게시판",
+          "status": "verified",
+          "fnct_no": "1277"
+        },
+        {
+          "menu_id": "8472",
+          "title": "취업게시판",
+          "status": "verified",
+          "fnct_no": "1278"
+        },
+        {
+          "menu_id": "8466",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "1280"
+        },
+        {
+          "menu_id": "8466",
+          "title": "전공자료실",
+          "status": "verified",
+          "fnct_no": "1280"
+        },
+        {
+          "menu_id": "8467",
+          "title": "파즈르 자료실",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "8477",
+          "title": "지하드 자료실",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "8478",
+          "title": "아즈하르 자료실",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1275",
+        "1277",
+        "1278",
+        "1279"
+      ]
+    },
+    "arthistory": {
+      "boards": [
+        {
+          "menu_id": "7096",
+          "title": "비교과활동",
+          "status": "verified",
+          "fnct_no": "1052"
+        },
+        {
+          "menu_id": "7097",
+          "title": "진로 및 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "7042",
+          "title": "진로 및 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11333",
+          "title": "비교과활동",
+          "status": "verified",
+          "fnct_no": "1618"
+        },
+        {
+          "menu_id": "7492",
+          "title": "게시판",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "7493",
+          "title": "일반공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7494",
+          "title": "취업공지",
+          "status": "verified",
+          "fnct_no": "1150"
+        },
+        {
+          "menu_id": "7097",
+          "title": "진로및전망",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1051",
+        "1052"
+      ]
+    },
+    "bangmok": {
+      "boards": [
+        {
+          "menu_id": "1657",
+          "title": "성공학특강",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "1657",
+          "title": "인문캠퍼스 성공학특강",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "1658",
+          "title": "자연캠퍼스 성공학특강",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8945",
+          "title": "공지사항",
+          "status": "verified",
+          "fnct_no": "1337"
+        },
+        {
+          "menu_id": "1663",
+          "title": "프로그램 안내",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8920",
+          "title": "방목비교과프로그램",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8920",
+          "title": "인성교육프로그램",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "8942",
+          "title": "우수리포트 공모전",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1671",
+          "title": "예비대학프로그램",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "10032",
+          "title": "새내기의 명지대 캠퍼스 탐방 V-log 공모전",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1678",
+          "title": "공지사항",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1679",
+          "title": "자료실",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1681",
+          "title": "공지게시판",
+          "status": "registered"
+        },
+        {
+          "menu_id": "1681",
+          "title": "공지사항(자연)",
+          "status": "registered"
+        },
+        {
+          "menu_id": "1682",
+          "title": "공지사항(인문)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "11572",
+          "title": "전공자유학부/융합전공학부 공지 (24학번 및 그 이전 입학생)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1708",
+          "title": "방목특화프로그램",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1657",
+          "title": "방목기획특강",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1681",
+          "title": "정보광장",
+          "status": "registered"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "357",
+        "358"
+      ]
+    },
+    "bsnbi": {
+      "boards": [
+        {
+          "menu_id": "7187",
+          "title": "학사일정",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7187",
+          "title": "학사공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7180",
+          "title": "학과공지사항",
+          "status": "verified",
+          "fnct_no": "1090"
+        },
+        {
+          "menu_id": "7181",
+          "title": "취업공지사항",
+          "status": "verified",
+          "fnct_no": "1091"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1088",
+        "1091"
+      ]
+    },
+    "cap": {
+      "boards": [
+        {
+          "menu_id": "6718",
+          "title": "비교과 교육과정인증",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6522",
+          "title": "공지사항",
+          "status": "registered"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "974"
+      ]
+    },
+    "chem": {
+      "boards": [
+        {
+          "menu_id": "6300",
+          "title": "새소식",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6300",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6301",
+          "title": "학과소식",
+          "status": "verified",
+          "fnct_no": "1083"
+        },
+        {
+          "menu_id": "6302",
+          "title": "내부게시판",
+          "status": "verified",
+          "fnct_no": "1084"
+        },
+        {
+          "menu_id": "6303",
+          "title": "취업정보",
+          "status": "verified",
+          "fnct_no": "1085"
+        },
+        {
+          "menu_id": "6596",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "1086"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1082"
+      ]
+    },
+    "chemeng": {
+      "boards": [
+        {
+          "menu_id": "4905",
+          "title": "전공소식",
+          "status": "verified",
+          "fnct_no": "732"
+        },
+        {
+          "menu_id": "5018",
+          "title": "졸업 후 진로",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4910",
+          "title": "학사업무",
+          "status": "registered"
+        },
+        {
+          "menu_id": "4910",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "5022",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "717"
+        },
+        {
+          "menu_id": "5023",
+          "title": "자유게시판",
+          "status": "verified",
+          "fnct_no": "718"
+        },
+        {
+          "menu_id": "5027",
+          "title": "동문게시판",
+          "status": "verified",
+          "fnct_no": "719"
+        },
+        {
+          "menu_id": "5028",
+          "title": "취업게시판",
+          "status": "verified",
+          "fnct_no": "720"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "671",
+        "672",
+        "720"
+      ]
+    },
+    "child": {
+      "boards": [
+        {
+          "menu_id": "7489",
+          "title": "진로와전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "7490",
+          "title": "진로와전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "7440",
+          "title": "커뮤니티",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7440",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7441",
+          "title": "아동학전공 소식",
+          "status": "verified",
+          "fnct_no": "1135"
+        },
+        {
+          "menu_id": "7442",
+          "title": "홍보게시판",
+          "status": "verified",
+          "fnct_no": "1134"
+        },
+        {
+          "menu_id": "7447",
+          "title": "취업게시판",
+          "status": "verified",
+          "fnct_no": "1133"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1136"
+      ]
+    },
+    "civil": {
+      "boards": [
+        {
+          "menu_id": "6136",
+          "title": "진로 및 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6562",
+          "title": "취업공고",
+          "status": "verified",
+          "fnct_no": "892"
+        },
+        {
+          "menu_id": "6563",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6758",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "889"
+        },
+        {
+          "menu_id": "9544",
+          "title": "장학금",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "9544",
+          "title": "교수장학금",
+          "status": "not-board"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "891",
+        "892"
+      ]
+    },
+    "cll": {
+      "boards": [
+        {
+          "menu_id": "4846",
+          "title": "진로 및 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4835",
+          "title": "커뮤니티",
+          "status": "registered"
+        },
+        {
+          "menu_id": "4835",
+          "title": "전공공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "4836",
+          "title": "교수공지",
+          "status": "verified",
+          "fnct_no": "685"
+        },
+        {
+          "menu_id": "4845",
+          "title": "게시판",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4853",
+          "title": "자유게시판",
+          "status": "verified",
+          "fnct_no": "691"
+        },
+        {
+          "menu_id": "4852",
+          "title": "취업게시판",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4846",
+          "title": "진로 및 전망 졸업 후 진로를 안내합니다",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4839",
+          "title": "전공 활동 전공과 관련된 각종 행사안내입니다",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "665",
+        "689",
+        "692"
+      ]
+    },
+    "col": {
+      "boards": [
+        {
+          "menu_id": "1299",
+          "title": "법학과",
+          "status": "registered"
+        },
+        {
+          "menu_id": "1299",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "1304",
+          "title": "장학제도",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "1305",
+          "title": "공지사항",
+          "status": "verified",
+          "fnct_no": "256"
+        },
+        {
+          "menu_id": "1310",
+          "title": "장학제도",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "1340",
+          "title": "진로정보",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "1321",
+          "title": "기초학력 강화 프로그램",
+          "status": "verified",
+          "fnct_no": "261"
+        },
+        {
+          "menu_id": "1317",
+          "title": "진로역량 강화 프로그램",
+          "status": "verified",
+          "fnct_no": "254"
+        },
+        {
+          "menu_id": "9580",
+          "title": "자유게시판",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "9582",
+          "title": "자료실",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1323",
+          "title": "공지사항",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1346",
+          "title": "게시판",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1348",
+          "title": "자료실",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "101",
+        "102",
+        "254",
+        "261"
+      ]
+    },
+    "cs": {
+      "boards": [
+        {
+          "menu_id": "10765",
+          "title": "장학 내규",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11132",
+          "title": "장학금 안내",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "10789",
+          "title": "게시판",
+          "status": "registered"
+        },
+        {
+          "menu_id": "10789",
+          "title": "학부 공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "10791",
+          "title": "취업게시판",
+          "status": "verified",
+          "fnct_no": "1525"
+        },
+        {
+          "menu_id": "10792",
+          "title": "자유게시판",
+          "status": "verified",
+          "fnct_no": "1526"
+        },
+        {
+          "menu_id": "11341",
+          "title": "행사 및 수상 갤러리",
+          "status": "verified",
+          "fnct_no": "1579"
+        },
+        {
+          "menu_id": "11077",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "1524"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1522",
+        "1524",
+        "1525",
+        "1526"
+      ]
+    },
+    "ctl": {
+      "boards": [
+        {
+          "menu_id": "5277",
+          "title": "What-SSUP 공모전",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5278",
+          "title": "TL 세미나룸",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5280",
+          "title": "학습법 특강",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5281",
+          "title": "학사경고자 학습지원 프로그램",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5349",
+          "title": "프로그램 신청하기",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5259",
+          "title": "커뮤니티",
+          "status": "registered"
+        },
+        {
+          "menu_id": "5259",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "5285",
+          "title": "프로그램 참여 우수사례집",
+          "status": "verified",
+          "fnct_no": "751"
+        },
+        {
+          "menu_id": "5426",
+          "title": "행사 안내",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "5348",
+          "title": "프로그램 리스트",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "792"
+      ]
+    },
+    "dcd": {
+      "boards": [
+        {
+          "menu_id": "7361",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7361",
+          "title": "학사공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7377",
+          "title": "학과공지사항",
+          "status": "verified",
+          "fnct_no": "1117"
+        },
+        {
+          "menu_id": "7378",
+          "title": "취업공지사항",
+          "status": "verified",
+          "fnct_no": "1120"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1117",
+        "1118",
+        "1452"
+      ]
+    },
+    "dm": {
+      "boards": [
+        {
+          "menu_id": "6613",
+          "title": "졸업 후 진로",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6438",
+          "title": "게시판",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6438",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6439",
+          "title": "취업 및 공모전",
+          "status": "verified",
+          "fnct_no": "922"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "919",
+        "922"
+      ]
+    },
+    "dorm": {
+      "boards": [
+        {
+          "menu_id": "7479",
+          "title": "뉴스레터",
+          "status": "verified",
+          "fnct_no": "1148"
+        },
+        {
+          "menu_id": "6729",
+          "title": "커뮤니티",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6729",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7792",
+          "title": "입퇴사 공지사항",
+          "status": "verified",
+          "fnct_no": "1185"
+        },
+        {
+          "menu_id": "6743",
+          "title": "개인정보",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6743",
+          "title": "개인정보처리방침",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6744",
+          "title": "제3자 정보제공 내역",
+          "status": "verified",
+          "fnct_no": "1141"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1185",
+        "929"
+      ]
+    },
+    "ee": {
+      "boards": [
+        {
+          "menu_id": "8288",
+          "title": "전망과 진로",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8324",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "8326",
+          "title": "취업정보",
+          "status": "verified",
+          "fnct_no": "1260"
+        },
+        {
+          "menu_id": "8409",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "1257"
+        },
+        {
+          "menu_id": "8409",
+          "title": "일반자료실",
+          "status": "verified",
+          "fnct_no": "1257"
+        },
+        {
+          "menu_id": "8411",
+          "title": "자유게시판",
+          "status": "verified",
+          "fnct_no": "1259"
+        },
+        {
+          "menu_id": "8414",
+          "title": "전공활동정보",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8548",
+          "title": "장학금 정보",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1257",
+        "1260",
+        "1261",
+        "1272"
+      ]
+    },
+    "elec": {
+      "boards": [
+        {
+          "menu_id": "4983",
+          "title": "진로 및 취업",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4880",
+          "title": "공지사항",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4986",
+          "title": "공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "4985",
+          "title": "취업정보",
+          "status": "verified",
+          "fnct_no": "724"
+        },
+        {
+          "menu_id": "4991",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "711"
+        },
+        {
+          "menu_id": "4991",
+          "title": "일반자료실",
+          "status": "verified",
+          "fnct_no": "711"
+        },
+        {
+          "menu_id": "4985",
+          "title": "취업정보 산업체 관련기업",
+          "status": "verified",
+          "fnct_no": "724"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "669",
+        "711",
+        "733"
+      ]
+    },
+    "english": {
+      "boards": [
+        {
+          "menu_id": "6910",
+          "title": "학사일정",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6910",
+          "title": "학사공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6923",
+          "title": "전공공지사항",
+          "status": "verified",
+          "fnct_no": "1034"
+        },
+        {
+          "menu_id": "9590",
+          "title": "동아-윤정미 장학금",
+          "status": "verified",
+          "fnct_no": "1403"
+        },
+        {
+          "menu_id": "9587",
+          "title": "동아-윤정미 장학금",
+          "status": "verified",
+          "fnct_no": "1387"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1034",
+        "1387",
+        "1402"
+      ]
+    },
+    "foodnutrition": {
+      "boards": [
+        {
+          "menu_id": "8016",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "8016",
+          "title": "학교공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "8017",
+          "title": "학과공지",
+          "status": "verified",
+          "fnct_no": "1211"
+        },
+        {
+          "menu_id": "8018",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "1212"
+        },
+        {
+          "menu_id": "6605",
+          "title": "취업 게시판",
+          "status": "verified",
+          "fnct_no": "912"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1210",
+        "1211",
+        "912"
+      ]
+    },
+    "gsie": {
+      "boards": [
+        {
+          "menu_id": "10863",
+          "title": "Announcements (News &amp; Events)",
+          "status": "registered"
+        },
+        {
+          "menu_id": "10863",
+          "title": "Notice",
+          "status": "registered"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1537",
+        "1539",
+        "1540",
+        "1541"
+      ]
+    },
+    "humanrights": {
+      "boards": [
+        {
+          "menu_id": "8578",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "8578",
+          "title": "센터소식",
+          "status": "registered"
+        },
+        {
+          "menu_id": "8570",
+          "title": "센터 밖 소식",
+          "status": "verified",
+          "fnct_no": "1297"
+        },
+        {
+          "menu_id": "8568",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "1299"
+        },
+        {
+          "menu_id": "8582",
+          "title": "뉴스레터",
+          "status": "verified",
+          "fnct_no": "1301"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1297",
+        "1302"
+      ]
+    },
+    "ie": {
+      "boards": [
+        {
+          "menu_id": "6183",
+          "title": "졸업후진로",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6767",
+          "title": "물류정보시스템",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6211",
+          "title": "게시판",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6564",
+          "title": "학과 공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6565",
+          "title": "교과목 공지사항",
+          "status": "verified",
+          "fnct_no": "993"
+        },
+        {
+          "menu_id": "6567",
+          "title": "취업게시판",
+          "status": "verified",
+          "fnct_no": "995"
+        },
+        {
+          "menu_id": "6568",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "996"
+        },
+        {
+          "menu_id": "6219",
+          "title": "학생회 게시판",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "992",
+        "993",
+        "994",
+        "995"
+      ]
+    },
+    "ince": {
+      "boards": [
+        {
+          "menu_id": "11031",
+          "title": "전망과 진로",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5112",
+          "title": "정보통신공학전공",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5114",
+          "title": "장학금 안내",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5115",
+          "title": "졸업 후 진로",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11036",
+          "title": "인공지능ICT융합전공",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5116",
+          "title": "정보통신공학 대학원소개",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11032",
+          "title": "인공지능융합학과 대학원소개",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "5118",
+          "title": "대학원 장학금 안내",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "11047",
+          "title": "RISE 사업단 장학금",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "11039",
+          "title": "비교과 프로그램 소개",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "11040",
+          "title": "장학금 안내",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "11041",
+          "title": "장학금 정보",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "5121",
+          "title": "커뮤니티",
+          "status": "registered"
+        },
+        {
+          "menu_id": "5121",
+          "title": "학부 공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "5122",
+          "title": "대학원 공지사항",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "5123",
+          "title": "취업게시판",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "5124",
+          "title": "행사 및 수상 갤러리",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "11036",
+          "title": "(학부) 인공지능 ICT융합전공 [학부] ≡ 인공지능ICT융합전공",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "11032",
+          "title": "(대학원) 인공지능 융합학과 [대학원] ≡ 인공지능융합학과",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "11041",
+          "title": "장학금정보",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "679",
+        "730",
+        "731"
+      ]
+    },
+    "innovation": {
+      "boards": [
+        {
+          "menu_id": "1090",
+          "title": "커뮤니티",
+          "status": "registered"
+        },
+        {
+          "menu_id": "1090",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "1093",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "58"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "56",
+        "67"
+      ]
+    },
+    "job": {
+      "boards": [
+        {
+          "menu_id": "7194",
+          "title": "진로/취업정보시스템",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8033",
+          "title": "진로취업지원팀",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "7199",
+          "title": "공지게시판",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "7200",
+          "title": "공지게시판",
+          "status": "verified",
+          "fnct_no": "1093"
+        },
+        {
+          "menu_id": "7194",
+          "title": "진로/취업 정보시스템 시스템 및 구성원 소개",
+          "status": "not-board"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1093"
+      ]
+    },
+    "kll": {
+      "boards": [
+        {
+          "menu_id": "8355",
+          "title": "졸업 후 진로",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8399",
+          "title": "전공행사",
+          "status": "verified",
+          "fnct_no": "1268"
+        },
+        {
+          "menu_id": "8398",
+          "title": "학생 자유게시판",
+          "status": "verified",
+          "fnct_no": "1266"
+        },
+        {
+          "menu_id": "8391",
+          "title": "공지사항",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8392",
+          "title": "전공공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "8657",
+          "title": "학교공지",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8391",
+          "title": "진로·취업",
+          "status": "not-board"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1266",
+        "1267",
+        "1268",
+        "1269",
+        "1271",
+        "1313"
+      ]
+    },
+    "lis": {
+      "boards": [
+        {
+          "menu_id": "6710",
+          "title": "진로 및 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5973",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "5973",
+          "title": "학사공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7505",
+          "title": "전공공지",
+          "status": "verified",
+          "fnct_no": "1149"
+        },
+        {
+          "menu_id": "5974",
+          "title": "취업공지",
+          "status": "verified",
+          "fnct_no": "963"
+        },
+        {
+          "menu_id": "8742",
+          "title": "학생회 공지사항",
+          "status": "verified",
+          "fnct_no": "1321"
+        },
+        {
+          "menu_id": "8705",
+          "title": "학생회 행사앨범",
+          "status": "verified",
+          "fnct_no": "1320"
+        },
+        {
+          "menu_id": "6011",
+          "title": "자유게시판",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8686",
+          "title": "CURRICULUM 문헌정보학전공 교과과정 바로가기",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "8684",
+          "title": "PROFESSOR 문헌정보학전공 교수소개 바로가기",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1149",
+        "1321",
+        "962"
+      ]
+    },
+    "math": {
+      "boards": [
+        {
+          "menu_id": "6231",
+          "title": "알림글",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6231",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6232",
+          "title": "학과소식",
+          "status": "verified",
+          "fnct_no": "1008"
+        },
+        {
+          "menu_id": "6264",
+          "title": "자유게시판",
+          "status": "verified",
+          "fnct_no": "1014"
+        },
+        {
+          "menu_id": "6591",
+          "title": "취업정보",
+          "status": "verified",
+          "fnct_no": "902"
+        },
+        {
+          "menu_id": "6582",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "1013"
+        },
+        {
+          "menu_id": "6582",
+          "title": "학부자료실",
+          "status": "verified",
+          "fnct_no": "1013"
+        },
+        {
+          "menu_id": "6583",
+          "title": "대학원자료실",
+          "status": "verified",
+          "fnct_no": "1012"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "901"
+      ]
+    },
+    "me": {
+      "boards": [
+        {
+          "menu_id": "4935",
+          "title": "전망과 진로",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5086",
+          "title": "공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "5086",
+          "title": "뉴스·공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "5087",
+          "title": "취업·아르바이트",
+          "status": "verified",
+          "fnct_no": "722"
+        },
+        {
+          "menu_id": "5088",
+          "title": "장학금·공모전",
+          "status": "verified",
+          "fnct_no": "723"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "675",
+        "676",
+        "722",
+        "723"
+      ]
+    },
+    "mjtrans": {
+      "boards": [
+        {
+          "menu_id": "10812",
+          "title": "일반프로그램·공학심화비적용",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "10811",
+          "title": "공학심화프로그램",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11562",
+          "title": "장학금",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11562",
+          "title": "성적장학금",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11563",
+          "title": "교내장학금",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6838",
+          "title": "진로 및 취업",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6838",
+          "title": "졸업 후 진로",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "6847",
+          "title": "전공정보 및 커뮤니티",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6848",
+          "title": "자유게시판",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "6847",
+          "title": "공지사항",
+          "status": "registered"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1003"
+      ]
+    },
+    "mjupsc": {
+      "boards": [
+        {
+          "menu_id": "10642",
+          "title": "봉사프로그램",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "10634",
+          "title": "지구촌프로그램",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "10639",
+          "title": "봉사단체지원프로그램",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "9892",
+          "title": "소식",
+          "status": "verified",
+          "fnct_no": "1569"
+        },
+        {
+          "menu_id": "9978",
+          "title": "봉사정보",
+          "status": "verified",
+          "fnct_no": "1570"
+        },
+        {
+          "menu_id": "9979",
+          "title": "봉사관련 자료실",
+          "status": "verified",
+          "fnct_no": "1510"
+        },
+        {
+          "menu_id": "9894",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "9985",
+          "title": "자유게시판",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "10644",
+          "title": "봉사학점 계획서 제출 인문캠퍼스 게시판 -",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "10645",
+          "title": "봉사학점 계획서 제출 자연캠퍼스 게시판 -",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1431",
+        "1570"
+      ]
+    },
+    "mse": {
+      "boards": [
+        {
+          "menu_id": "5048",
+          "title": "장학금 및 학생복지",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4929",
+          "title": "졸업후진로",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "5053",
+          "title": "게시판",
+          "status": "verified",
+          "fnct_no": "725"
+        },
+        {
+          "menu_id": "5053",
+          "title": "전공 소식 및 행사",
+          "status": "verified",
+          "fnct_no": "725"
+        },
+        {
+          "menu_id": "5054",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "5055",
+          "title": "취업광장",
+          "status": "verified",
+          "fnct_no": "726"
+        },
+        {
+          "menu_id": "5218",
+          "title": "전공 내부게시판",
+          "status": "not-board"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "673",
+        "725"
+      ]
+    },
+    "nichibun": {
+      "boards": [
+        {
+          "menu_id": "4888",
+          "title": "진로와 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4862",
+          "title": "永[공지・소식]",
+          "status": "registered"
+        },
+        {
+          "menu_id": "4862",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "5145",
+          "title": "교수님소식",
+          "status": "verified",
+          "fnct_no": "739"
+        },
+        {
+          "menu_id": "5146",
+          "title": "취업정보",
+          "status": "verified",
+          "fnct_no": "740"
+        },
+        {
+          "menu_id": "6886",
+          "title": "학생회 공지사항",
+          "status": "verified",
+          "fnct_no": "1019"
+        },
+        {
+          "menu_id": "4865",
+          "title": "공모전*구인etc",
+          "status": "verified",
+          "fnct_no": "695"
+        },
+        {
+          "menu_id": "4863",
+          "title": "日文자료실",
+          "status": "verified",
+          "fnct_no": "694"
+        },
+        {
+          "menu_id": "4889",
+          "title": "文[행사・활동]",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "4890",
+          "title": "전공행사",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "4889",
+          "title": "학생회행사",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "4887",
+          "title": "진로와 전망 전공을 졸업하시면 어떤 길이 펼쳐질까요",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "4863",
+          "title": "日文 자료실 각종 서식 및 자료를 열람하실 수 있습니다.",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "667",
+        "694",
+        "698"
+      ]
+    },
+    "phyedu": {
+      "boards": [
+        {
+          "menu_id": "6018",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6020",
+          "title": "취업관련",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6020",
+          "title": "취업 관련 사이트",
+          "status": "not-board"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "860",
+        "861"
+      ]
+    },
+    "physics": {
+      "boards": [
+        {
+          "menu_id": "7507",
+          "title": "진로 및 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "7073",
+          "title": "게시판",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7073",
+          "title": "학과공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7074",
+          "title": "취업공지사항",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "7139",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "1077"
+        },
+        {
+          "menu_id": "7507",
+          "title": "졸업후진로",
+          "status": "not-board"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1072",
+        "1073"
+      ]
+    },
+    "ro": {
+      "boards": [
+        {
+          "menu_id": "10951",
+          "title": "전망과 진로",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "10999",
+          "title": "인공지능 로봇",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11004",
+          "title": "인공지능",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "10987",
+          "title": "공지/커뮤니티",
+          "status": "registered"
+        },
+        {
+          "menu_id": "10987",
+          "title": "학부 공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "10988",
+          "title": "대학원 공지사항",
+          "status": "verified",
+          "fnct_no": "1558"
+        },
+        {
+          "menu_id": "10989",
+          "title": "취업게시판",
+          "status": "verified",
+          "fnct_no": "1559"
+        },
+        {
+          "menu_id": "10990",
+          "title": "행사 및 수상 갤러리",
+          "status": "verified",
+          "fnct_no": "1560"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1556",
+        "1560"
+      ]
+    },
+    "sangdam": {
+      "boards": [
+        {
+          "menu_id": "4810",
+          "title": "프로그램",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4822",
+          "title": "생애진로설계 프로그램",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4813",
+          "title": "공지사항",
+          "status": "verified",
+          "fnct_no": "663"
+        },
+        {
+          "menu_id": "4814",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "681"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "663"
+      ]
+    },
+    "sba": {
+      "boards": [
+        {
+          "menu_id": "2223",
+          "title": "커뮤니티",
+          "status": "registered"
+        },
+        {
+          "menu_id": "2223",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "2226",
+          "title": "게시판",
+          "status": "verified",
+          "fnct_no": "253"
+        },
+        {
+          "menu_id": "3266",
+          "title": "앨범게시판",
+          "status": "verified",
+          "fnct_no": "584"
+        },
+        {
+          "menu_id": "2224",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "252"
+        },
+        {
+          "menu_id": "2229",
+          "title": "경영정보학과",
+          "status": "not-board"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "100",
+        "253",
+        "99"
+      ]
+    },
+    "semi": {
+      "boards": [
+        {
+          "menu_id": "8504",
+          "title": "진로 및 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "8529",
+          "title": "대학원 공지사항",
+          "status": "verified",
+          "fnct_no": "1286"
+        },
+        {
+          "menu_id": "8528",
+          "title": "학부 공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "8530",
+          "title": "취업게시판",
+          "status": "verified",
+          "fnct_no": "1287"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1284",
+        "1286",
+        "1287",
+        "1288"
+      ]
+    },
+    "software": {
+      "boards": [
+        {
+          "menu_id": "9814",
+          "title": "진로 및 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "9786",
+          "title": "인공지능전공",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "9799",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "9799",
+          "title": "학사공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "9800",
+          "title": "진로/취업/행사공지",
+          "status": "verified",
+          "fnct_no": "1423"
+        },
+        {
+          "menu_id": "12116",
+          "title": "대학소식",
+          "status": "verified",
+          "fnct_no": "1735"
+        },
+        {
+          "menu_id": "9807",
+          "title": "자료실",
+          "status": "verified",
+          "fnct_no": "1424"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1420",
+        "1421"
+      ]
+    },
+    "startup": {
+      "boards": [
+        {
+          "menu_id": "3234",
+          "title": "학내 창업지원프로그램",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "3236",
+          "title": "창업교육프로그램",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "3240",
+          "title": "공지게시판",
+          "status": "registered"
+        },
+        {
+          "menu_id": "8594",
+          "title": "동영상게시판",
+          "status": "verified",
+          "fnct_no": "1303"
+        },
+        {
+          "menu_id": "3234",
+          "title": "학내 창업지원프로그램 창업교육센터 학내 창업지원프로그램입니다",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "3236",
+          "title": "창업교육프로그램 창업교육센터 창업교육프로그램입니다",
+          "status": "not-board"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "565"
+      ]
+    },
+    "writers": {
+      "boards": [
+        {
+          "menu_id": "7472",
+          "title": "진로 및 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "7468",
+          "title": "학사일정",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7468",
+          "title": "학사공지",
+          "status": "registered"
+        },
+        {
+          "menu_id": "7318",
+          "title": "게시판",
+          "status": "verified",
+          "fnct_no": "1112"
+        },
+        {
+          "menu_id": "7318",
+          "title": "학생활동 공지",
+          "status": "verified",
+          "fnct_no": "1112"
+        },
+        {
+          "menu_id": "7319",
+          "title": "채용 및 공모전",
+          "status": "verified",
+          "fnct_no": "1115"
+        },
+        {
+          "menu_id": "8682",
+          "title": "행사안내",
+          "status": "verified",
+          "fnct_no": "1316"
+        },
+        {
+          "menu_id": "8683",
+          "title": "학회소식",
+          "status": "verified",
+          "fnct_no": "1317"
+        },
+        {
+          "menu_id": "9846",
+          "title": "동문소식",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "9847",
+          "title": "등단소식",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1112",
+        "1115",
+        "1116"
+      ]
+    },
+    "youth": {
+      "boards": [
+        {
+          "menu_id": "7806",
+          "title": "공지사항",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6858",
+          "title": "공지사항",
+          "status": "registered"
+        },
+        {
+          "menu_id": "8401",
+          "title": "사회혁신 공지사항",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6784",
+          "title": "진로 및 전망",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "6858",
+          "title": "청지정보마당",
+          "status": "registered"
+        },
+        {
+          "menu_id": "6859",
+          "title": "청소년지도학전공 소식",
+          "status": "verified",
+          "fnct_no": "999"
+        },
+        {
+          "menu_id": "6861",
+          "title": "취업·기관실습정보",
+          "status": "verified",
+          "fnct_no": "1001"
+        },
+        {
+          "menu_id": "6860",
+          "title": "대외·공모전·장학금정보",
+          "status": "verified",
+          "fnct_no": "1188"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "1000",
+        "1001",
+        "1188",
+        "998",
+        "999"
+      ]
+    },
+    "majorfree": {
+      "boards": [
+        {
+          "menu_id": "11207",
+          "title": "인공지능·소프트웨어융합대학",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11213",
+          "title": "진로탐색학점제",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11220",
+          "title": "학생지원체계(프로그램 등)",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "12117",
+          "title": "전공·진로설계시스템 (e-Advisor)",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11222",
+          "title": "진로·전공 탐색 교과·비교과",
+          "status": "not-board"
+        }
+      ],
+      "bbs_evidence_fncts": []
+    },
+    "humanities": {
+      "boards": [
+        {
+          "menu_id": "2801",
+          "title": "공지사항",
+          "status": "verified",
+          "fnct_no": "517"
+        },
+        {
+          "menu_id": "2804",
+          "title": "업무 자료실",
+          "status": "verified",
+          "fnct_no": "521"
+        },
+        {
+          "menu_id": "2802",
+          "title": "인문대 행사",
+          "status": "verified",
+          "fnct_no": "519"
+        },
+        {
+          "menu_id": "11081",
+          "title": "비교과프로그램",
+          "status": "verified",
+          "fnct_no": "1178"
+        },
+        {
+          "menu_id": "2803",
+          "title": "취업정보",
+          "status": "verified",
+          "fnct_no": "520"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "517",
+        "568"
+      ]
+    },
+    "gs": {
+      "boards": [
+        {
+          "menu_id": "4452",
+          "title": "경영정보학과",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4496",
+          "title": "문헌정보학과",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4591",
+          "title": "생명과학정보학과",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "4679",
+          "title": "정보통신공학과",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "11577",
+          "title": "인공지능융합학과",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "1783",
+          "title": "모집안내",
+          "status": "verified",
+          "fnct_no": "659"
+        },
+        {
+          "menu_id": "2763",
+          "title": "장학제도",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1789",
+          "title": "게시판",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1789",
+          "title": "학사공지",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1790",
+          "title": "일반공지",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "4761",
+          "title": "기타공지(취업, 행사 등)",
+          "status": "candidate(예산 소진)"
+        },
+        {
+          "menu_id": "1792",
+          "title": "자료실",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "195",
+        "656",
+        "657",
+        "775"
+      ]
+    },
+    "mjedu": {
+      "boards": [
+        {
+          "menu_id": "2150",
+          "title": "장학금",
+          "status": "not-board"
+        },
+        {
+          "menu_id": "2113",
+          "title": "게시판",
+          "status": "verified",
+          "fnct_no": "237"
+        },
+        {
+          "menu_id": "2113",
+          "title": "학사공지",
+          "status": "verified",
+          "fnct_no": "237"
+        },
+        {
+          "menu_id": "2115",
+          "title": "일반공지",
+          "status": "verified",
+          "fnct_no": "236"
+        },
+        {
+          "menu_id": "2117",
+          "title": "서식자료실",
+          "status": "verified",
+          "fnct_no": "240"
+        },
+        {
+          "menu_id": "2115",
+          "title": "자유게시판",
+          "status": "verified",
+          "fnct_no": "236"
+        },
+        {
+          "menu_id": "2144",
+          "title": "학교생활안내 학교생활에 필요한 다양한 정보안내",
+          "status": "candidate(예산 소진)"
+        }
+      ],
+      "bbs_evidence_fncts": [
+        "236",
+        "237",
+        "240"
+      ]
+    },
+    "eng": {
+      "boards": [
+        {
+          "menu_id": "1436",
+          "title": "공지사항",
+          "fnct_no": "115",
+          "status": "verified"
+        },
+        {
+          "menu_id": "1437",
+          "title": "자료실",
+          "fnct_no": "266",
+          "status": "verified"
+        },
+        {
+          "menu_id": "10802",
+          "title": "공지사항",
+          "fnct_no": "1531",
+          "status": "verified"
+        },
+        {
+          "menu_id": "12125",
+          "title": "공지사항",
+          "fnct_no": "1736",
+          "status": "verified"
+        }
+      ],
+      "bbs_evidence_fncts": []
+    },
+    "ict": {
+      "boards": [],
+      "bbs_evidence_fncts": []
+    },
+    "social": {
+      "boards": [
+        {
+          "menu_id": "2940",
+          "title": "공지사항",
+          "fnct_no": "420",
+          "status": "verified"
+        },
+        {
+          "menu_id": "2941",
+          "title": "자료실",
+          "fnct_no": "577",
+          "status": "verified"
+        }
+      ],
+      "bbs_evidence_fncts": []
+    },
+    "art": {
+      "boards": [
+        {
+          "menu_id": "6703",
+          "title": "학사공지",
+          "fnct_no": "973",
+          "status": "verified"
+        },
+        {
+          "menu_id": "6715",
+          "title": "학부행사",
+          "fnct_no": "972",
+          "status": "verified"
+        },
+        {
+          "menu_id": "6715",
+          "title": "공지사항",
+          "fnct_no": "972",
+          "status": "verified"
+        },
+        {
+          "menu_id": "6713",
+          "title": "전공 공지사항",
+          "fnct_no": "970",
+          "status": "verified"
+        },
+        {
+          "menu_id": "6693",
+          "title": "취업 공지사항",
+          "fnct_no": "968",
+          "status": "verified"
+        }
+      ],
+      "bbs_evidence_fncts": []
+    },
+    "nature": {
+      "boards": [
+        {
+          "menu_id": "3004",
+          "title": "공지사항",
+          "fnct_no": "424",
+          "status": "verified"
+        },
+        {
+          "menu_id": "3004",
+          "title": "대학소식",
+          "fnct_no": "424",
+          "status": "verified"
+        },
+        {
+          "menu_id": "2974",
+          "title": "자유게시판",
+          "fnct_no": "581",
+          "status": "verified"
+        },
+        {
+          "menu_id": "2975",
+          "title": "사진게시판",
+          "fnct_no": "582",
+          "status": "verified"
+        },
+        {
+          "menu_id": "2977",
+          "title": "문의게시판",
+          "fnct_no": "583",
+          "status": "verified"
+        }
+      ],
+      "bbs_evidence_fncts": []
+    }
+  }
+}

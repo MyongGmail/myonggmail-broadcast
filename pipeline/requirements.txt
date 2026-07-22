@@ -1,0 +1,4 @@
+# 크롤러 v2 런타임 의존성 (GitHub Actions: .github/workflows/crawl.yml)
+# 미설치 환경에서도 core/http.py·adapters/base.py가 표준 라이브러리로 폴백한다.
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5

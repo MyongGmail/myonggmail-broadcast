@@ -1,0 +1,1321 @@
+{
+  "generated_from": "mju.boards_full.json (discover_k2web 2026-07-18)",
+  "curation_rule": "학생 대상(공지·비교과·취업·공모·장학·프로그램·행사) enabled / 자유·자료실·갤러리·대학원 등 제외",
+  "channels": [
+    {
+      "key": "b-3e-6121",
+      "name": "3e 취업게시판",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "3e",
+      "media_group": "colleges",
+      "params": {
+        "site": "3e",
+        "menu_id": "6121",
+        "fnct_no": "887"
+      }
+    },
+    {
+      "key": "b-3e-8098",
+      "name": "3e 공모전·대외활동",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "contest",
+      "operator": "3e",
+      "media_group": "colleges",
+      "params": {
+        "site": "3e",
+        "menu_id": "8098",
+        "fnct_no": "888"
+      }
+    },
+    {
+      "key": "b-arab-8472",
+      "name": "arab 취업게시판",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "arab",
+      "media_group": "colleges",
+      "params": {
+        "site": "arab",
+        "menu_id": "8472",
+        "fnct_no": "1278"
+      }
+    },
+    {
+      "key": "b-arthistory-7096",
+      "name": "arthistory 비교과활동",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "arthistory",
+      "media_group": "colleges",
+      "params": {
+        "site": "arthistory",
+        "menu_id": "7096",
+        "fnct_no": "1052"
+      }
+    },
+    {
+      "key": "b-arthistory-11333",
+      "name": "arthistory 비교과활동",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "arthistory",
+      "media_group": "colleges",
+      "params": {
+        "site": "arthistory",
+        "menu_id": "11333",
+        "fnct_no": "1618"
+      }
+    },
+    {
+      "key": "b-arthistory-7494",
+      "name": "arthistory 취업공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "arthistory",
+      "media_group": "colleges",
+      "params": {
+        "site": "arthistory",
+        "menu_id": "7494",
+        "fnct_no": "1150"
+      }
+    },
+    {
+      "key": "b-bangmok-8945",
+      "name": "bangmok 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "bangmok",
+      "media_group": "colleges",
+      "params": {
+        "site": "bangmok",
+        "menu_id": "8945",
+        "fnct_no": "1337",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-bsnbi-7180",
+      "name": "bsnbi 학과공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "bsnbi",
+      "media_group": "colleges",
+      "params": {
+        "site": "bsnbi",
+        "menu_id": "7180",
+        "fnct_no": "1090",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-bsnbi-7181",
+      "name": "bsnbi 취업공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "bsnbi",
+      "media_group": "colleges",
+      "params": {
+        "site": "bsnbi",
+        "menu_id": "7181",
+        "fnct_no": "1091"
+      }
+    },
+    {
+      "key": "b-chem-6301",
+      "name": "chem 학과소식",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "chem",
+      "media_group": "colleges",
+      "params": {
+        "site": "chem",
+        "menu_id": "6301",
+        "fnct_no": "1083",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-chem-6303",
+      "name": "chem 취업정보",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "chem",
+      "media_group": "colleges",
+      "params": {
+        "site": "chem",
+        "menu_id": "6303",
+        "fnct_no": "1085",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-chemeng-4905",
+      "name": "chemeng 전공소식",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "chemeng",
+      "media_group": "colleges",
+      "params": {
+        "site": "chemeng",
+        "menu_id": "4905",
+        "fnct_no": "732",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-chemeng-5028",
+      "name": "chemeng 취업게시판",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "chemeng",
+      "media_group": "colleges",
+      "params": {
+        "site": "chemeng",
+        "menu_id": "5028",
+        "fnct_no": "720"
+      }
+    },
+    {
+      "key": "b-child-7441",
+      "name": "child 아동학전공 소식",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "child",
+      "media_group": "colleges",
+      "params": {
+        "site": "child",
+        "menu_id": "7441",
+        "fnct_no": "1135"
+      }
+    },
+    {
+      "key": "b-child-7447",
+      "name": "child 취업게시판",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "child",
+      "media_group": "colleges",
+      "params": {
+        "site": "child",
+        "menu_id": "7447",
+        "fnct_no": "1133"
+      }
+    },
+    {
+      "key": "b-civil-6562",
+      "name": "civil 취업공고",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "civil",
+      "media_group": "colleges",
+      "params": {
+        "site": "civil",
+        "menu_id": "6562",
+        "fnct_no": "892"
+      }
+    },
+    {
+      "key": "b-col-1305",
+      "name": "col 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "col",
+      "media_group": "colleges",
+      "params": {
+        "site": "col",
+        "menu_id": "1305",
+        "fnct_no": "256"
+      }
+    },
+    {
+      "key": "b-col-1321",
+      "name": "col 기초학력 강화 프로그램",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "col",
+      "media_group": "colleges",
+      "params": {
+        "site": "col",
+        "menu_id": "1321",
+        "fnct_no": "261"
+      }
+    },
+    {
+      "key": "b-col-1317",
+      "name": "col 진로역량 강화 프로그램",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "col",
+      "media_group": "colleges",
+      "params": {
+        "site": "col",
+        "menu_id": "1317",
+        "fnct_no": "254"
+      }
+    },
+    {
+      "key": "b-cs-10791",
+      "name": "cs 취업게시판",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "cs",
+      "media_group": "colleges",
+      "params": {
+        "site": "cs",
+        "menu_id": "10791",
+        "fnct_no": "1525"
+      }
+    },
+    {
+      "key": "b-dcd-7377",
+      "name": "dcd 학과공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "dcd",
+      "media_group": "colleges",
+      "params": {
+        "site": "dcd",
+        "menu_id": "7377",
+        "fnct_no": "1117"
+      }
+    },
+    {
+      "key": "b-dcd-7378",
+      "name": "dcd 취업공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "dcd",
+      "media_group": "colleges",
+      "params": {
+        "site": "dcd",
+        "menu_id": "7378",
+        "fnct_no": "1120",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-dm-6439",
+      "name": "dm 취업 및 공모전",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "dm",
+      "media_group": "colleges",
+      "params": {
+        "site": "dm",
+        "menu_id": "6439",
+        "fnct_no": "922"
+      }
+    },
+    {
+      "key": "b-ee-8326",
+      "name": "ee 취업정보",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "ee",
+      "media_group": "colleges",
+      "params": {
+        "site": "ee",
+        "menu_id": "8326",
+        "fnct_no": "1260"
+      }
+    },
+    {
+      "key": "b-elec-4985",
+      "name": "elec 취업정보",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "elec",
+      "media_group": "colleges",
+      "params": {
+        "site": "elec",
+        "menu_id": "4985",
+        "fnct_no": "724"
+      }
+    },
+    {
+      "key": "b-english-6923",
+      "name": "english 전공공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "english",
+      "media_group": "colleges",
+      "params": {
+        "site": "english",
+        "menu_id": "6923",
+        "fnct_no": "1034"
+      }
+    },
+    {
+      "key": "b-english-9590",
+      "name": "english 동아-윤정미 장학금",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "scholarship",
+      "operator": "english",
+      "media_group": "colleges",
+      "params": {
+        "site": "english",
+        "menu_id": "9590",
+        "fnct_no": "1403"
+      }
+    },
+    {
+      "key": "b-english-9587",
+      "name": "english 동아-윤정미 장학금",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "scholarship",
+      "operator": "english",
+      "media_group": "colleges",
+      "params": {
+        "site": "english",
+        "menu_id": "9587",
+        "fnct_no": "1387"
+      }
+    },
+    {
+      "key": "b-foodnutrition-8017",
+      "name": "foodnutrition 학과공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "foodnutrition",
+      "media_group": "colleges",
+      "params": {
+        "site": "foodnutrition",
+        "menu_id": "8017",
+        "fnct_no": "1211"
+      }
+    },
+    {
+      "key": "b-foodnutrition-6605",
+      "name": "foodnutrition 취업 게시판",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "foodnutrition",
+      "media_group": "colleges",
+      "params": {
+        "site": "foodnutrition",
+        "menu_id": "6605",
+        "fnct_no": "912"
+      }
+    },
+    {
+      "key": "b-humanities-2801",
+      "name": "humanities 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "humanities",
+      "media_group": "colleges",
+      "params": {
+        "site": "humanities",
+        "menu_id": "2801",
+        "fnct_no": "517"
+      }
+    },
+    {
+      "key": "b-humanities-2802",
+      "name": "humanities 인문대 행사",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "humanities",
+      "media_group": "colleges",
+      "params": {
+        "site": "humanities",
+        "menu_id": "2802",
+        "fnct_no": "519"
+      }
+    },
+    {
+      "key": "b-humanities-11081",
+      "name": "humanities 비교과프로그램",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "humanities",
+      "media_group": "colleges",
+      "params": {
+        "site": "humanities",
+        "menu_id": "11081",
+        "fnct_no": "1178"
+      }
+    },
+    {
+      "key": "b-humanities-2803",
+      "name": "humanities 취업정보",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "humanities",
+      "media_group": "colleges",
+      "params": {
+        "site": "humanities",
+        "menu_id": "2803",
+        "fnct_no": "520"
+      }
+    },
+    {
+      "key": "b-ie-6565",
+      "name": "ie 교과목 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "ie",
+      "media_group": "colleges",
+      "params": {
+        "site": "ie",
+        "menu_id": "6565",
+        "fnct_no": "993"
+      }
+    },
+    {
+      "key": "b-ie-6567",
+      "name": "ie 취업게시판",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "ie",
+      "media_group": "colleges",
+      "params": {
+        "site": "ie",
+        "menu_id": "6567",
+        "fnct_no": "995"
+      }
+    },
+    {
+      "key": "b-job-7200",
+      "name": "job 공지게시판",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "job",
+      "media_group": "colleges",
+      "params": {
+        "site": "job",
+        "menu_id": "7200",
+        "fnct_no": "1093",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-kll-8399",
+      "name": "kll 전공행사",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "kll",
+      "media_group": "colleges",
+      "params": {
+        "site": "kll",
+        "menu_id": "8399",
+        "fnct_no": "1268",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-lis-7505",
+      "name": "lis 전공공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "lis",
+      "media_group": "colleges",
+      "params": {
+        "site": "lis",
+        "menu_id": "7505",
+        "fnct_no": "1149"
+      }
+    },
+    {
+      "key": "b-lis-5974",
+      "name": "lis 취업공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "lis",
+      "media_group": "colleges",
+      "params": {
+        "site": "lis",
+        "menu_id": "5974",
+        "fnct_no": "963"
+      }
+    },
+    {
+      "key": "b-lis-8742",
+      "name": "lis 학생회 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "lis",
+      "media_group": "colleges",
+      "params": {
+        "site": "lis",
+        "menu_id": "8742",
+        "fnct_no": "1321"
+      }
+    },
+    {
+      "key": "b-math-6232",
+      "name": "math 학과소식",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "math",
+      "media_group": "colleges",
+      "params": {
+        "site": "math",
+        "menu_id": "6232",
+        "fnct_no": "1008",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-math-6591",
+      "name": "math 취업정보",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "math",
+      "media_group": "colleges",
+      "params": {
+        "site": "math",
+        "menu_id": "6591",
+        "fnct_no": "902",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-me-5087",
+      "name": "me 취업·아르바이트",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "me",
+      "media_group": "colleges",
+      "params": {
+        "site": "me",
+        "menu_id": "5087",
+        "fnct_no": "722"
+      }
+    },
+    {
+      "key": "b-me-5088",
+      "name": "me 장학금·공모전",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "contest",
+      "operator": "me",
+      "media_group": "colleges",
+      "params": {
+        "site": "me",
+        "menu_id": "5088",
+        "fnct_no": "723"
+      }
+    },
+    {
+      "key": "b-mjukr-244",
+      "name": "mjukr 공지사항",
+      "strategy": "k2web",
+      "enabled": false,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "mjukr",
+      "media_group": "colleges",
+      "note": "정체 미확인(메뉴 244 '공지사항') — 수동 확인 후 활성화",
+      "params": {
+        "site": "mjukr",
+        "menu_id": "244",
+        "fnct_no": "163"
+      }
+    },
+    {
+      "key": "b-mjupsc-9892",
+      "name": "mjupsc 소식",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "mjupsc",
+      "media_group": "colleges",
+      "params": {
+        "site": "mjupsc",
+        "menu_id": "9892",
+        "fnct_no": "1569",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-mjupsc-9978",
+      "name": "mjupsc 봉사정보",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "mjupsc",
+      "media_group": "colleges",
+      "params": {
+        "site": "mjupsc",
+        "menu_id": "9978",
+        "fnct_no": "1570"
+      }
+    },
+    {
+      "key": "b-mse-5055",
+      "name": "mse 취업광장",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "mse",
+      "media_group": "colleges",
+      "params": {
+        "site": "mse",
+        "menu_id": "5055",
+        "fnct_no": "726"
+      }
+    },
+    {
+      "key": "b-nichibun-5146",
+      "name": "nichibun 취업정보",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "nichibun",
+      "media_group": "colleges",
+      "params": {
+        "site": "nichibun",
+        "menu_id": "5146",
+        "fnct_no": "740"
+      }
+    },
+    {
+      "key": "b-nichibun-6886",
+      "name": "nichibun 학생회 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "nichibun",
+      "media_group": "colleges",
+      "params": {
+        "site": "nichibun",
+        "menu_id": "6886",
+        "fnct_no": "1019"
+      }
+    },
+    {
+      "key": "b-nichibun-4865",
+      "name": "nichibun 공모전*구인etc",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "contest",
+      "operator": "nichibun",
+      "media_group": "colleges",
+      "params": {
+        "site": "nichibun",
+        "menu_id": "4865",
+        "fnct_no": "695"
+      }
+    },
+    {
+      "key": "b-ro-10989",
+      "name": "ro 취업게시판",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "ro",
+      "media_group": "colleges",
+      "params": {
+        "site": "ro",
+        "menu_id": "10989",
+        "fnct_no": "1559",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-sangdam-4813",
+      "name": "sangdam 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "sangdam",
+      "media_group": "colleges",
+      "params": {
+        "site": "sangdam",
+        "menu_id": "4813",
+        "fnct_no": "663"
+      }
+    },
+    {
+      "key": "b-semi-8530",
+      "name": "semi 취업게시판",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "semi",
+      "media_group": "colleges",
+      "params": {
+        "site": "semi",
+        "menu_id": "8530",
+        "fnct_no": "1287"
+      }
+    },
+    {
+      "key": "b-software-9800",
+      "name": "software 진로/취업/행사공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "software",
+      "media_group": "colleges",
+      "params": {
+        "site": "software",
+        "menu_id": "9800",
+        "fnct_no": "1423"
+      }
+    },
+    {
+      "key": "b-software-12116",
+      "name": "software 대학소식",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "software",
+      "media_group": "colleges",
+      "params": {
+        "site": "software",
+        "menu_id": "12116",
+        "fnct_no": "1735"
+      }
+    },
+    {
+      "key": "b-writers-7319",
+      "name": "writers 채용 및 공모전",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "writers",
+      "media_group": "colleges",
+      "params": {
+        "site": "writers",
+        "menu_id": "7319",
+        "fnct_no": "1115"
+      }
+    },
+    {
+      "key": "b-writers-8682",
+      "name": "writers 행사안내",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "writers",
+      "media_group": "colleges",
+      "params": {
+        "site": "writers",
+        "menu_id": "8682",
+        "fnct_no": "1316"
+      }
+    },
+    {
+      "key": "b-writers-8683",
+      "name": "writers 학회소식",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "writers",
+      "media_group": "colleges",
+      "params": {
+        "site": "writers",
+        "menu_id": "8683",
+        "fnct_no": "1317",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-youth-6859",
+      "name": "youth 청소년지도학전공 소식",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "youth",
+      "media_group": "colleges",
+      "params": {
+        "site": "youth",
+        "menu_id": "6859",
+        "fnct_no": "999",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-youth-6861",
+      "name": "youth 취업·기관실습정보",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "youth",
+      "media_group": "colleges",
+      "params": {
+        "site": "youth",
+        "menu_id": "6861",
+        "fnct_no": "1001"
+      }
+    },
+    {
+      "key": "b-youth-6860",
+      "name": "youth 대외·공모전·장학금정보",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "contest",
+      "operator": "youth",
+      "media_group": "colleges",
+      "params": {
+        "site": "youth",
+        "menu_id": "6860",
+        "fnct_no": "1188"
+      }
+    },
+    {
+      "key": "mjuecon",
+      "name": "경제학전공 공지(외부 도메인)",
+      "strategy": "rss",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "경제학전공",
+      "media_group": "colleges",
+      "note": "Wix 사이트지만 RSS 서버렌더 제공(robots 허용, 판정 2026-07-18). 게시 월 1~2건",
+      "params": {
+        "url": "https://www.mjuecon.org/blog-feed.xml"
+      }
+    },
+    {
+      "key": "b-eng-1436",
+      "name": "eng 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "eng",
+      "media_group": "colleges",
+      "params": {
+        "site": "eng",
+        "menu_id": "1436",
+        "fnct_no": "115"
+      }
+    },
+    {
+      "key": "b-eng-10802",
+      "name": "eng 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "eng",
+      "media_group": "colleges",
+      "params": {
+        "site": "eng",
+        "menu_id": "10802",
+        "fnct_no": "1531"
+      }
+    },
+    {
+      "key": "b-eng-12125",
+      "name": "eng 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "eng",
+      "media_group": "colleges",
+      "params": {
+        "site": "eng",
+        "menu_id": "12125",
+        "fnct_no": "1736"
+      }
+    },
+    {
+      "key": "b-social-2940",
+      "name": "social 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "social",
+      "media_group": "colleges",
+      "params": {
+        "site": "social",
+        "menu_id": "2940",
+        "fnct_no": "420"
+      }
+    },
+    {
+      "key": "b-art-6703",
+      "name": "art 학사공지",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "art",
+      "media_group": "colleges",
+      "params": {
+        "site": "art",
+        "menu_id": "6703",
+        "fnct_no": "973",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-art-6715",
+      "name": "art 학부행사",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "events",
+      "operator": "art",
+      "media_group": "colleges",
+      "params": {
+        "site": "art",
+        "menu_id": "6715",
+        "fnct_no": "972",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-art-6713",
+      "name": "art 전공 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "art",
+      "media_group": "colleges",
+      "params": {
+        "site": "art",
+        "menu_id": "6713",
+        "fnct_no": "970",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-art-6693",
+      "name": "art 취업 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "career",
+      "operator": "art",
+      "media_group": "colleges",
+      "params": {
+        "site": "art",
+        "menu_id": "6693",
+        "fnct_no": "968",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "b-nature-3004",
+      "name": "nature 공지사항",
+      "strategy": "k2web",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "nature",
+      "media_group": "colleges",
+      "params": {
+        "site": "nature",
+        "menu_id": "3004",
+        "fnct_no": "424",
+        "allow_empty": true
+      },
+      "note": "발견 시점 빈 게시판 — 글 등장 시 자동 수집(빈 결과 정상)"
+    },
+    {
+      "key": "arch",
+      "name": "건축대학 공지(자체 사이트)",
+      "strategy": "arch",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "건축대학(건축학·전통건축·공간디자인)",
+      "media_group": "colleges",
+      "note": "board_list.vm 카테고리형. b=공지 e=학생회 h=채용 n=국제교류. backfill 시 pages 상한 필수(b가 100페이지)",
+      "params": {
+        "host": "arch.mju.ac.kr",
+        "categories": [
+          "b",
+          "e",
+          "h",
+          "n"
+        ]
+      }
+    },
+    {
+      "key": "fut-mjwelfare",
+      "name": "미래융합대 사회복지학과",
+      "strategy": "bizdemo_php",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "사회복지학과",
+      "media_group": "colleges",
+      "params": {
+        "host": "mjwelfare.mju.ac.kr",
+        "boards": [
+          {
+            "path": "/default/05/01.php",
+            "query": {
+              "topmenu": "5",
+              "left": "1"
+            },
+            "label": "학과공지"
+          }
+        ]
+      }
+    },
+    {
+      "key": "fut-real",
+      "name": "미래융합대 부동산학과",
+      "strategy": "bizdemo_php",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "부동산학과",
+      "media_group": "colleges",
+      "params": {
+        "host": "real.mju.ac.kr",
+        "boards": [
+          {
+            "path": "/default/05/01.php",
+            "query": {
+              "topmenu": "5",
+              "left": "1"
+            },
+            "label": "학과공지"
+          }
+        ]
+      }
+    },
+    {
+      "key": "fut-psy",
+      "name": "미래융합대 심리치료학과",
+      "strategy": "bizdemo_php",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "심리치료학과",
+      "media_group": "colleges",
+      "params": {
+        "host": "psy.mju.ac.kr",
+        "boards": [
+          {
+            "path": "/default/05/01.php",
+            "query": {
+              "topmenu": "5",
+              "left": "1"
+            },
+            "label": "학과공지"
+          }
+        ]
+      }
+    },
+    {
+      "key": "fut-mjlaw",
+      "name": "미래융합대 법무행정학과",
+      "strategy": "bizdemo_php",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "법무행정학과",
+      "media_group": "colleges",
+      "params": {
+        "host": "mjlaw.mju.ac.kr",
+        "boards": [
+          {
+            "path": "/default/05/01.php",
+            "query": {
+              "topmenu": "5",
+              "left": "1"
+            },
+            "label": "학과공지"
+          }
+        ]
+      }
+    },
+    {
+      "key": "fut-dfba",
+      "name": "미래융합대 미래융합경영학과",
+      "strategy": "bizdemo_php",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "미래융합경영학과",
+      "media_group": "colleges",
+      "params": {
+        "host": "dfba.mju.ac.kr",
+        "boards": [
+          {
+            "path": "/default/05/01.php",
+            "query": {
+              "topmenu": "5",
+              "left": "1"
+            },
+            "label": "학과공지"
+          }
+        ]
+      }
+    },
+    {
+      "key": "fut-multid",
+      "name": "미래융합대 멀티디자인학과",
+      "strategy": "bizdemo_php",
+      "enabled": true,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "멀티디자인학과",
+      "media_group": "colleges",
+      "params": {
+        "host": "multid.mju.ac.kr",
+        "boards": [
+          {
+            "path": "/default/05/01.php",
+            "query": {
+              "topmenu": "5",
+              "left": "1"
+            },
+            "label": "학과공지"
+          }
+        ]
+      }
+    },
+    {
+      "key": "fut-bizhrd",
+      "name": "미래융합대 창의융합인재학부",
+      "strategy": "bizdemo_php",
+      "enabled": false,
+      "priority": "low",
+      "category_hint": "mixed",
+      "operator": "창의융합인재학부",
+      "media_group": "colleges",
+      "note": "bizhrd.mju.ac.kr /default/05/01.php 404 — 경로 실측 후 활성화 (계약학과는 host 미발견)",
+      "params": {
+        "host": "bizhrd.mju.ac.kr",
+        "boards": [
+          {
+            "path": "/default/05/01.php",
+            "query": {
+              "topmenu": "5",
+              "left": "1"
+            },
+            "label": "학과공지"
+          }
+        ]
+      }
+    }
+  ]
+}
