@@ -5,8 +5,8 @@
 #   수동 실행    : Actions 탭 또는 `gh workflow run crawl.yml -f mode=backfill`
 #
 # 시크릿(설정 절차는 infra/README.md):
-#   SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY                — 없으면 로컬 JSON 스냅샷만 생성
-#   R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY  — 선택: 스냅샷 R2 백업
+#   R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY — 유일한 비밀(버킷 2종 한정 토큰)
+#   ⚠ C3 완전 격리: 이 모듈은 Supabase 등 본체 백엔드에 접합하지 않는다(크롤→스냅샷→방송→R2가 전부)
 
 name: crawl
 
@@ -76,30 +76,11 @@ jobs:
 
       - name: Crawl (incremental)
         if: steps.mode.outputs.mode == 'incremental'
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python3 -m pipeline.crawler.v2.run --school mju
 
       - name: Crawl (backfill)
         if: steps.mode.outputs.mode == 'backfill'
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python3 -m pipeline.crawler.v2.run --school mju --mode backfill --pages 0 --detail-limit 500
-
-      # 크롤 성공 후 엣지 캐시(infra/cloudflare/api) 무효화 — 시크릿 미설정이면 스킵.
-      - name: Purge edge cache (optional)
-        env:
-          PURGE_URL: ${{ secrets.PURGE_URL }}
-          PURGE_TOKEN: ${{ secrets.PURGE_TOKEN }}
-        run: |
-          if [ -z "$PURGE_URL" ] || [ -z "$PURGE_TOKEN" ]; then
-            echo "PURGE 시크릿 미설정 — 엣지 캐시 퍼지 스킵(TTL 만료에 위임)"
-            exit 0
-          fi
-          curl -sf -X POST "$PURGE_URL" -H "X-Purge-Token: $PURGE_TOKEN" \
-            && echo "엣지 캐시 퍼지 완료" || echo "퍼지 실패(비치명) — TTL 만료에 위임"
 
       - name: Save snapshot state
         if: always()
