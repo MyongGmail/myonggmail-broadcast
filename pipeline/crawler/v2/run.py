@@ -20,6 +20,7 @@ import sys
 import time
 from pathlib import Path
 
+from .adapters.base import HAVE_BS4
 from .core import storage
 from .core.http import DisallowedByRobots, PoliteClient
 from .core.model import now_utc_iso
@@ -94,7 +95,30 @@ def main():
     ap.add_argument("--channels", default="", help="쉼표 구분 채널 key 필터")
     ap.add_argument("--no-detail", action="store_true", help="상세 본문 수집 생략")
     ap.add_argument("--detail-limit", type=int, default=150, help="실행당 상세 요청 상한")
+    ap.add_argument(
+        "--allow-no-bs4", action="store_true",
+        help="bs4 없이 정규식 폴백으로 수집(제목 품질 저하를 감수한다는 명시 선언)",
+    )
     args = ap.parse_args()
+
+    # bs4 부재는 **조용한 품질 저하**다 — 예외가 아니라 정규식 폴백으로 넘어가고, 그 폴백은
+    # 엔티티를 풀지 않아 제목에 `&lt;`·`&amp;`가 그대로 실린다(bs4의 get_text()는 풀어 준다).
+    # 즉 **같은 코드가 환경에 따라 다른 데이터를 만든다.**
+    #
+    # 2026-07-28 인구조사가 정확히 이 상태로 21,734행을 수집했고 제목 442건이 파손됐다.
+    # CI는 무죄다 — beautifulsoup4는 pipeline/requirements.txt에 있고 crawl.yml이 설치한다.
+    # 파손된 실행은 **로컬**이었다. 아무도 못 알아챈 이유는 크롤이 성공으로 끝났기 때문이다.
+    # 그래서 가드를 CI가 아니라 여기(진입점)에 둔다 — 사고가 난 자리가 여기다.
+    if not HAVE_BS4:
+        msg = (
+            "bs4(beautifulsoup4)가 없다 — 정규식 폴백은 HTML 엔티티를 풀지 못해\n"
+            "  제목에 &lt;·&amp;가 그대로 저장된다(2026-07-28 실사고: 442건).\n"
+            "  설치:  python3 -m pip install -r pipeline/requirements.txt\n"
+            "  품질 저하를 감수하고 진행하려면:  --allow-no-bs4"
+        )
+        if not args.allow_no_bs4:
+            raise SystemExit(f"[중단] {msg}")
+        print(f"[경고] {msg}", flush=True)
 
     cfg = load_school(args.school)
     school_id = cfg["school"]["id"]

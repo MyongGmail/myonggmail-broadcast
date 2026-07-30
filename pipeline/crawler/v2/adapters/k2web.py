@@ -18,7 +18,7 @@ import xml.etree.ElementTree as ET
 from urllib.parse import urljoin
 
 from ..core.model import make_notice
-from .base import HAVE_BS4, soup, strip_tags, take_detail
+from .base import HAVE_BS4, clean_body, clean_text, soup, take_detail
 
 BASE = "https://www.mju.ac.kr"
 
@@ -45,27 +45,71 @@ def _dedup_key(href):
     return "k2web:%s:%s:%s" % m.groups(), m.groups()
 
 
+def _rows_table_skin(doc):
+    """스킨 A — 표 목록. `tbody tr` + `td._artclTdTitle` + `td._artclTdRdate`."""
+    rows = []
+    for tr in doc.select("tbody tr"):
+        td = tr.select_one("td._artclTdTitle")
+        if td is None:
+            continue
+        a = td.select_one("a.artclLinkView") or td.select_one("a[href]")
+        if a is None or not a.get("href"):
+            continue
+        strong = a.select_one("strong")
+        title = _clean_title((strong or a).get_text(" "))
+        date_td = tr.select_one("td._artclTdRdate")
+        rows.append((title, a["href"], date_td.get_text(strip=True) if date_td else None))
+    return rows
+
+
+def _rows_thumb_skin(doc):
+    """스킨 B — 썸네일 목록(`li.thumbLi`). 학과 게시판 다수가 이 스킨이다.
+
+    표가 아니라 `a.artclLinkView` 안에 제목(`div.artclTitle`)과 메타(`dl._artclregDate`)가 들어간다.
+    날짜 클래스가 스킨 A의 `_artclTdRdate`와 **다르다**(`_artclregDate`) — 이 한 글자 차이 때문에
+    2026-07-28 인구조사에서 이 스킨의 게시판 10곳 281건이 전부 `date: null`로 저장됐다.
+    """
+    rows = []
+    for a in doc.select("a.artclLinkView[href]"):
+        title_el = a.select_one(".artclTitle") or a.select_one("strong")
+        title = _clean_title((title_el or a).get_text(" "))
+        if not title:
+            continue
+        # ⚠️ 날짜는 **전용 요소 안에서만** 찾는다. 이 스킨의 일부 변종은 작성일을 아예
+        # 게시하지 않으면서(`artclInfo`에 작성자·조회수·첨부파일만) 본문 미리보기
+        # `div.artclContent`를 함께 싣는데, 거기에 "2026.07." 같은 날짜가 흔히 들어 있다.
+        # li 전체로 정규식을 넓히면 그 본문 날짜를 게시일로 착각한다 — 없는 것을
+        # None으로 두는 편이 그럴듯한 거짓 날짜보다 낫다(row_date가 scraped_at으로 폴백한다).
+        date = None
+        d = a.select_one("._artclregDate") or a.select_one("[class*=regDate]")
+        if d:
+            m = re.search(r"\d{4}[-.]\d{1,2}[-.]\d{1,2}", d.get_text(" "))
+            date = m.group(0) if m else None
+        rows.append((title, a["href"], date))
+    return rows
+
+
 def _parse_list(html, log):
-    """목록 HTML → [(title, view_url, date)] — bs4 우선, 정규식 폴백."""
+    """목록 HTML → [(title, view_url, date)] — 스킨 2종 + 정규식 폴백.
+
+    ⚠️ bs4가 항상 우월하다고 전제하면 안 된다. 스킨 A만 알던 시절, 스킨 B 게시판에서는
+    bs4 경로가 **0행**을 내고 정규식 폴백이 링크만 건져 왔다(날짜는 못 건졌다). 즉 bs4를
+    설치하는 것만으로 그 게시판이 78건 → 0건이 되는 상태였다. 그래서 두 스킨을 차례로
+    시도하고, 그래도 0이면 정규식으로 내려간다 — **경로마다 커버리지가 다르다.**
+    """
     rows = []
     if HAVE_BS4:
         doc = soup(html)
-        for tr in doc.select("tbody tr"):
-            td = tr.select_one("td._artclTdTitle")
-            if td is None:
-                continue
-            a = td.select_one("a.artclLinkView") or td.select_one("a[href]")
-            if a is None or not a.get("href"):
-                continue
-            strong = a.select_one("strong")
-            title = _clean_title((strong or a).get_text(" "))
-            date_td = tr.select_one("td._artclTdRdate")
-            rows.append((title, a["href"], date_td.get_text(strip=True) if date_td else None))
-    else:
+        rows = _rows_table_skin(doc)
+        if not rows:
+            rows = _rows_thumb_skin(doc)
+    if not rows:
         anchors = ROW_FALLBACK_RE.findall(html)
         dates = DATE_FALLBACK_RE.findall(html)
+        if anchors and HAVE_BS4:
+            log(f"목록 스킨 미상 — 정규식 폴백으로 {len(anchors)}행(날짜 {len(dates)}건)")
         for i, (href, inner) in enumerate(anchors):
-            rows.append((_clean_title(strip_tags(inner)), href, dates[i] if i < len(dates) else None))
+            rows.append((_clean_title(clean_text(inner)), href, dates[i] if i < len(dates) else None))
     return rows
 
 
@@ -105,7 +149,7 @@ def _fetch_detail(client, url, log):
     if body is None:  # 폴백: artclView 블록을 정규식으로 절단
         m = re.search(r'<div class="artclView"[^>]*>(.*?)</div>\s*<!--', html, re.S)
         if m:
-            body = strip_tags(m.group(1))
+            body = clean_body(m.group(1))
     return body, attachments
 
 

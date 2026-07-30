@@ -129,9 +129,53 @@ jobs:
           AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
         run: |
           python3 -m pipeline.broadcast.generate --verify
+          # ── 배포 스큐 가드 ────────────────────────────────────────────────────
+          # --verify는 헤더의 층위 접두("d1.")만 본다 — 어떤 지문이든 통과한다.
+          # 정작 위험한 건 "앱이 들고 있는 사전"과 "지금 올리려는 방송"이 어긋나는 것이고,
+          # 그러면 앱이 방송을 **전량 폐기**한다(broadcast.ts:33). 에러도 배너도 없어서
+          # "새 공지가 없는 앱"과 화면상 구분되지 않는다 — 사람이 알아챌 수 없는 사고다.
+          # (입력은 전부 레포 안 파일이다 — 이벤트 페이로드 보간 없음)
+          BUNDLE=packages/shared/config/broadcast_dict_d1.json
+          if [ -f "$BUNDLE" ]; then
+            WANT=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['version'])" "$BUNDLE")
+            GOT=$(head -1 pipeline/broadcast/out/latest.txt | cut -d'|' -f2)
+            if [ "$WANT" != "$GOT" ]; then
+              echo "::error::방송 사전 스큐 — 앱 번들=$WANT · 산출물=$GOT"
+              echo "앱은 버전이 다르면 방송을 통째로 버린다(fail-closed). 배포 순서가 계약이다:"
+              echo "  1) pipeline/broadcast/out/dict_d1.json 을 $BUNDLE 로 동기"
+              echo "  2) 그 사전으로 APK를 다시 굽고 설치해 방송 실수신을 확인"
+              echo "  3) 그 다음에만 송출한다"
+              exit 1
+            fi
+            echo "사전 스큐 없음: $WANT"
+          else
+            echo "번들 사전 없음($BUNDLE) — 스큐 가드 스킵(앱을 갖지 않는 공개 모듈에서는 정상)"
+          fi
           if [ -z "$R2_ACCOUNT_ID" ] || [ -z "$AWS_ACCESS_KEY_ID" ] || [ -z "$AWS_SECRET_ACCESS_KEY" ]; then
             echo "R2 시크릿 미설정 — 방송 업로드 스킵(생성·검증만 수행)"
             exit 0
           fi
+          EP="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
           aws s3 sync pipeline/broadcast/out "s3://myonggmail-broadcast/v0" \
-            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+            --endpoint-url "$EP" --exclude "latest.txt"
+          # latest.txt만 gzip 본문 + Content-Encoding으로 덮어쓴다.
+          # sync가 붙이는 기본 헤더로는 r2.dev가 무압축으로 서빙해서 앱이 매 콜드 스타트마다
+          # 1.80 MiB를 그대로 받는다(2026-07-27 실측: 응답에 Content-Encoding 부재).
+          # 이 두 줄로 1,891,825 → 528,775 B(3.6배). 앱 수정 0 · APK 재빌드 0 —
+          # fetch().text()가 전송 압축을 투명하게 푼다.
+          aws s3 cp pipeline/broadcast/out/latest.txt.gz "s3://myonggmail-broadcast/v0/latest.txt" \
+            --endpoint-url "$EP" \
+            --content-encoding gzip --content-type "text/plain; charset=utf-8"
+          # 층위별 방송(public/commercial) — 채널이 없으면 생성기가 스킵하므로 디렉터리도 없다.
+          # 앱은 켠 층위만 받아 간다(ToS 완화: 상용은 명시 선택자에게만 전송).
+          for TIER in public commercial; do
+            SRC="pipeline/broadcast/out/$TIER/latest.txt.gz"
+            if [ ! -f "$SRC" ]; then
+              echo "[$TIER] 산출 없음 — 업로드 스킵"
+              continue
+            fi
+            aws s3 cp "$SRC" "s3://myonggmail-broadcast/v0/$TIER/latest.txt" \
+              --endpoint-url "$EP" \
+              --content-encoding gzip --content-type "text/plain; charset=utf-8"
+            echo "[$TIER] 업로드 완료"
+          done

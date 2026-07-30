@@ -1,5 +1,5 @@
 {
-  "$comment": "명지메일 채널 레지스트리 — 2026-07-18 전수조사(30종) 기반. 새 채널 추가 = 여기에 행 추가(코드 수정 불필요). strategy는 pipeline/crawler/v2/adapters/ 의 어댑터 이름.",
+  "$comment": "명지메일 채널 레지스트리 — 2026-07-18 전수조사(30종) 기반. 새 채널 추가 = 여기에 행 추가(코드 수정 불필요). strategy는 pipeline/crawler/v2/adapters/ 의 어댑터 이름. source_tier(선택, 기본 school)는 수집원 층위 — school|public|commercial. 층위별로 방송 파일과 사전이 분리되고 앱이 켠 층위만 받는다(docs/BROADCAST_FORMAT.md). 상용(commercial)은 robots를 통과해도 ToS·DB권이 별개라 앱에서 기본 OFF다.",
   "school": {
     "id": "mju",
     "name": "명지대학교",

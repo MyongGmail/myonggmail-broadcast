@@ -46,7 +46,7 @@ from urllib.parse import quote, unquote, urlparse, urlunparse
 
 from ..core.http import DisallowedByRobots
 from ..core.model import make_notice
-from .base import HAVE_BS4, soup, strip_tags
+from .base import HAVE_BS4, clean_text, soup
 
 VIEW_PATH = "/user/Board/comm_notice_view.do"
 MENU_QUERY = "CURRENT_MENU_CODE=MENU0028&TOP_MENU_CODE=MENU0005"
@@ -170,7 +170,7 @@ def _parse_cards(html, log):
             cards.append((bd_no, bbs_no, title, date))
     else:
         for bd_no, bbs_no, day, year, month, title_html in CARD_FALLBACK_RE.findall(html):
-            title = re.sub(r"\s+", " ", strip_tags(title_html)).strip()
+            title = clean_text(title_html)
             if not title:
                 continue
             cards.append((bd_no, bbs_no, title, "%s.%s.%s" % (year, month, day)))

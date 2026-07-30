@@ -139,7 +139,8 @@ def collect(ctx):
     for item in raw_items:
         try:
             bulletin_id = item["id"]
-            title = item.get("title") or ""
+            # API가 제목을 HTML 이스케이프해서 준다 — 여기서 풀지 않으면 &lt;가 그대로 저장된다
+            title = _html.unescape(item.get("title") or "")
         except (TypeError, KeyError) as exc:
             log(f"{ch['key']}: 항목 구조 이상 — {exc}: {str(item)[:120]}")
             continue

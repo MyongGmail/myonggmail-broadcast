@@ -1,0 +1,747 @@
+{
+ "version": "d1.87876c",
+ "channels": {
+  "00": {
+   "key": "arch",
+   "template": null,
+   "board_url": "https://arch.mju.ac.kr/board/board_view.vm"
+  },
+  "01": {
+   "key": "b-3e-6121",
+   "template": "https://www.mju.ac.kr/bbs/3e/887/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "02": {
+   "key": "b-3e-8098",
+   "template": null,
+   "board_url": "https://www.mju.ac.kr/bbs/3e/884/229891/artclView.do"
+  },
+  "03": {
+   "key": "b-arab-8472",
+   "template": "https://www.mju.ac.kr/bbs/arab/1278/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "04": {
+   "key": "b-art-6693",
+   "template": null,
+   "board_url": null
+  },
+  "05": {
+   "key": "b-art-6703",
+   "template": null,
+   "board_url": null
+  },
+  "06": {
+   "key": "b-art-6713",
+   "template": null,
+   "board_url": null
+  },
+  "07": {
+   "key": "b-art-6715",
+   "template": null,
+   "board_url": null
+  },
+  "08": {
+   "key": "b-arthistory-11333",
+   "template": "https://www.mju.ac.kr/bbs/arthistory/1618/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "09": {
+   "key": "b-arthistory-7096",
+   "template": "https://www.mju.ac.kr/bbs/arthistory/1052/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0a": {
+   "key": "b-arthistory-7494",
+   "template": "https://www.mju.ac.kr/bbs/arthistory/1150/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0b": {
+   "key": "b-bangmok-8945",
+   "template": null,
+   "board_url": null
+  },
+  "0c": {
+   "key": "b-bsnbi-7180",
+   "template": null,
+   "board_url": null
+  },
+  "0d": {
+   "key": "b-bsnbi-7181",
+   "template": "https://www.mju.ac.kr/bbs/bsnbi/1091/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0e": {
+   "key": "b-chem-6301",
+   "template": null,
+   "board_url": null
+  },
+  "0f": {
+   "key": "b-chem-6303",
+   "template": null,
+   "board_url": null
+  },
+  "0g": {
+   "key": "b-chemeng-4905",
+   "template": null,
+   "board_url": null
+  },
+  "0h": {
+   "key": "b-chemeng-5028",
+   "template": "https://www.mju.ac.kr/bbs/chemeng/720/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0i": {
+   "key": "b-child-7441",
+   "template": "https://www.mju.ac.kr/bbs/child/1135/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0j": {
+   "key": "b-child-7447",
+   "template": "https://www.mju.ac.kr/bbs/child/1133/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0k": {
+   "key": "b-civil-6562",
+   "template": "https://www.mju.ac.kr/bbs/civil/892/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0l": {
+   "key": "b-col-1305",
+   "template": "https://www.mju.ac.kr/bbs/col/256/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0m": {
+   "key": "b-col-1317",
+   "template": "https://www.mju.ac.kr/bbs/col/254/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0n": {
+   "key": "b-col-1321",
+   "template": "https://www.mju.ac.kr/bbs/col/261/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0o": {
+   "key": "b-cs-10791",
+   "template": "https://www.mju.ac.kr/bbs/cs/1525/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0p": {
+   "key": "b-dcd-7377",
+   "template": "https://www.mju.ac.kr/bbs/dcd/1117/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0q": {
+   "key": "b-dcd-7378",
+   "template": null,
+   "board_url": null
+  },
+  "0r": {
+   "key": "b-dm-6439",
+   "template": "https://www.mju.ac.kr/bbs/dm/922/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0s": {
+   "key": "b-ee-8326",
+   "template": "https://www.mju.ac.kr/bbs/ee/1260/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0t": {
+   "key": "b-elec-4985",
+   "template": "https://www.mju.ac.kr/bbs/elec/724/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0u": {
+   "key": "b-eng-10802",
+   "template": "https://www.mju.ac.kr/bbs/eng/1531/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0v": {
+   "key": "b-eng-12125",
+   "template": "https://www.mju.ac.kr/bbs/eng/1736/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0w": {
+   "key": "b-eng-1436",
+   "template": "https://www.mju.ac.kr/bbs/eng/115/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0x": {
+   "key": "b-english-6923",
+   "template": "https://www.mju.ac.kr/bbs/english/1034/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0y": {
+   "key": "b-english-9587",
+   "template": "https://www.mju.ac.kr/bbs/english/1387/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "0z": {
+   "key": "b-english-9590",
+   "template": "https://www.mju.ac.kr/bbs/english/1403/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "10": {
+   "key": "b-foodnutrition-6605",
+   "template": "https://www.mju.ac.kr/bbs/foodnutrition/912/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "11": {
+   "key": "b-foodnutrition-8017",
+   "template": "https://www.mju.ac.kr/bbs/foodnutrition/1211/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "12": {
+   "key": "b-humanities-11081",
+   "template": "https://www.mju.ac.kr/bbs/humanities/1178/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "13": {
+   "key": "b-humanities-2801",
+   "template": "https://www.mju.ac.kr/bbs/humanities/517/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "14": {
+   "key": "b-humanities-2802",
+   "template": "https://www.mju.ac.kr/bbs/humanities/519/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "15": {
+   "key": "b-humanities-2803",
+   "template": "https://www.mju.ac.kr/bbs/humanities/520/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "16": {
+   "key": "b-ie-6565",
+   "template": "https://www.mju.ac.kr/bbs/ie/993/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "17": {
+   "key": "b-ie-6567",
+   "template": "https://www.mju.ac.kr/bbs/ie/995/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "18": {
+   "key": "b-job-7200",
+   "template": null,
+   "board_url": null
+  },
+  "19": {
+   "key": "b-kll-8399",
+   "template": "https://www.mju.ac.kr/bbs/kll/1268/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1a": {
+   "key": "b-lis-5974",
+   "template": "https://www.mju.ac.kr/bbs/lis/963/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1b": {
+   "key": "b-lis-7505",
+   "template": "https://www.mju.ac.kr/bbs/lis/1149/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1c": {
+   "key": "b-lis-8742",
+   "template": "https://www.mju.ac.kr/bbs/lis/1321/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1d": {
+   "key": "b-math-6232",
+   "template": null,
+   "board_url": null
+  },
+  "1e": {
+   "key": "b-math-6591",
+   "template": null,
+   "board_url": null
+  },
+  "1f": {
+   "key": "b-me-5087",
+   "template": "https://www.mju.ac.kr/bbs/me/722/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1g": {
+   "key": "b-me-5088",
+   "template": "https://www.mju.ac.kr/bbs/me/723/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1h": {
+   "key": "b-mjukr-244",
+   "template": null,
+   "board_url": null
+  },
+  "1i": {
+   "key": "b-mjupsc-9892",
+   "template": null,
+   "board_url": null
+  },
+  "1j": {
+   "key": "b-mjupsc-9978",
+   "template": "https://www.mju.ac.kr/bbs/mjupsc/1570/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1k": {
+   "key": "b-mse-5055",
+   "template": "https://www.mju.ac.kr/bbs/mse/726/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1l": {
+   "key": "b-nature-3004",
+   "template": "https://www.mju.ac.kr/bbs/nature/424/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1m": {
+   "key": "b-nichibun-4865",
+   "template": "https://www.mju.ac.kr/bbs/nichibun/695/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1n": {
+   "key": "b-nichibun-5146",
+   "template": "https://www.mju.ac.kr/bbs/nichibun/740/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1o": {
+   "key": "b-nichibun-6886",
+   "template": "https://www.mju.ac.kr/bbs/nichibun/1019/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1p": {
+   "key": "b-ro-10989",
+   "template": null,
+   "board_url": null
+  },
+  "1q": {
+   "key": "b-sangdam-4813",
+   "template": "https://www.mju.ac.kr/bbs/sangdam/663/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1r": {
+   "key": "b-semi-8530",
+   "template": "https://www.mju.ac.kr/bbs/semi/1287/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1s": {
+   "key": "b-social-2940",
+   "template": "https://www.mju.ac.kr/bbs/social/420/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1t": {
+   "key": "b-software-12116",
+   "template": "https://www.mju.ac.kr/bbs/software/1735/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1u": {
+   "key": "b-software-9800",
+   "template": "https://www.mju.ac.kr/bbs/software/1423/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1v": {
+   "key": "b-writers-7319",
+   "template": "https://www.mju.ac.kr/bbs/writers/1115/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1w": {
+   "key": "b-writers-8682",
+   "template": "https://www.mju.ac.kr/bbs/writers/1316/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "1x": {
+   "key": "b-writers-8683",
+   "template": null,
+   "board_url": null
+  },
+  "1y": {
+   "key": "b-youth-6859",
+   "template": null,
+   "board_url": null
+  },
+  "1z": {
+   "key": "b-youth-6860",
+   "template": "https://www.mju.ac.kr/bbs/youth/1188/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "20": {
+   "key": "b-youth-6861",
+   "template": "https://www.mju.ac.kr/bbs/youth/1001/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "21": {
+   "key": "bangmok",
+   "template": "https://www.mju.ac.kr/bbs/bangmok/357/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "22": {
+   "key": "cap",
+   "template": "https://www.mju.ac.kr/bbs/cap/974/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "23": {
+   "key": "ctl",
+   "template": "https://www.mju.ac.kr/bbs/ctl/792/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "24": {
+   "key": "ddingdong",
+   "template": null,
+   "board_url": "https://ddingdong.mju.ac.kr/club/98"
+  },
+  "25": {
+   "key": "dept-3e",
+   "template": "https://www.mju.ac.kr/bbs/3e/884/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "26": {
+   "key": "dept-arab",
+   "template": "https://www.mju.ac.kr/bbs/arab/1275/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "27": {
+   "key": "dept-arthistory",
+   "template": "https://www.mju.ac.kr/bbs/arthistory/1051/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "28": {
+   "key": "dept-bsnbi",
+   "template": "https://www.mju.ac.kr/bbs/bsnbi/1088/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "29": {
+   "key": "dept-chem",
+   "template": "https://www.mju.ac.kr/bbs/chem/1082/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2a": {
+   "key": "dept-chemeng",
+   "template": "https://www.mju.ac.kr/bbs/chemeng/671/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2b": {
+   "key": "dept-child",
+   "template": "https://www.mju.ac.kr/bbs/child/1136/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2c": {
+   "key": "dept-civil",
+   "template": "https://www.mju.ac.kr/bbs/civil/891/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2d": {
+   "key": "dept-cll",
+   "template": "https://www.mju.ac.kr/bbs/cll/665/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2e": {
+   "key": "dept-col",
+   "template": "https://www.mju.ac.kr/bbs/col/101/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2f": {
+   "key": "dept-cs",
+   "template": "https://www.mju.ac.kr/bbs/cs/1522/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2g": {
+   "key": "dept-dcd",
+   "template": "https://www.mju.ac.kr/bbs/dcd/1118/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2h": {
+   "key": "dept-dm",
+   "template": "https://www.mju.ac.kr/bbs/dm/919/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2i": {
+   "key": "dept-ee",
+   "template": "https://www.mju.ac.kr/bbs/ee/1272/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2j": {
+   "key": "dept-elec",
+   "template": "https://www.mju.ac.kr/bbs/elec/669/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2k": {
+   "key": "dept-english",
+   "template": null,
+   "board_url": null
+  },
+  "2l": {
+   "key": "dept-foodnutrition",
+   "template": "https://www.mju.ac.kr/bbs/foodnutrition/1210/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2m": {
+   "key": "dept-gsie",
+   "template": "https://www.mju.ac.kr/bbs/gsie/1537/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2n": {
+   "key": "dept-ie",
+   "template": "https://www.mju.ac.kr/bbs/ie/992/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2o": {
+   "key": "dept-ince",
+   "template": "https://www.mju.ac.kr/bbs/ince/679/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2p": {
+   "key": "dept-kll",
+   "template": "https://www.mju.ac.kr/bbs/kll/1271/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2q": {
+   "key": "dept-lis",
+   "template": "https://www.mju.ac.kr/bbs/lis/962/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2r": {
+   "key": "dept-math",
+   "template": null,
+   "board_url": null
+  },
+  "2s": {
+   "key": "dept-me",
+   "template": "https://www.mju.ac.kr/bbs/me/675/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2t": {
+   "key": "dept-mjtrans",
+   "template": "https://www.mju.ac.kr/bbs/mjtrans/1003/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2u": {
+   "key": "dept-mse",
+   "template": "https://www.mju.ac.kr/bbs/mse/673/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2v": {
+   "key": "dept-nichibun",
+   "template": "https://www.mju.ac.kr/bbs/nichibun/667/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2w": {
+   "key": "dept-phyedu",
+   "template": null,
+   "board_url": null
+  },
+  "2x": {
+   "key": "dept-physics",
+   "template": "https://www.mju.ac.kr/bbs/physics/1072/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2y": {
+   "key": "dept-ro",
+   "template": "https://www.mju.ac.kr/bbs/ro/1556/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "2z": {
+   "key": "dept-sba",
+   "template": "https://www.mju.ac.kr/bbs/sba/99/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "30": {
+   "key": "dept-semi",
+   "template": "https://www.mju.ac.kr/bbs/semi/1284/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "31": {
+   "key": "dept-software",
+   "template": "https://www.mju.ac.kr/bbs/software/1420/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "32": {
+   "key": "dept-writers",
+   "template": null,
+   "board_url": null
+  },
+  "33": {
+   "key": "dept-youth",
+   "template": "https://www.mju.ac.kr/bbs/youth/998/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "34": {
+   "key": "dorm",
+   "template": "https://www.mju.ac.kr/bbs/dorm/929/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "35": {
+   "key": "fut-bizhrd",
+   "template": null,
+   "board_url": null
+  },
+  "36": {
+   "key": "fut-dfba",
+   "template": null,
+   "board_url": "https://dfba.mju.ac.kr/default/05/01.php"
+  },
+  "37": {
+   "key": "fut-mjlaw",
+   "template": null,
+   "board_url": "https://mjlaw.mju.ac.kr/default/05/01.php"
+  },
+  "38": {
+   "key": "fut-mjwelfare",
+   "template": null,
+   "board_url": "https://mjwelfare.mju.ac.kr/default/05/01.php"
+  },
+  "39": {
+   "key": "fut-multid",
+   "template": null,
+   "board_url": "https://multid.mju.ac.kr/default/05/01.php"
+  },
+  "3a": {
+   "key": "fut-psy",
+   "template": null,
+   "board_url": "https://psy.mju.ac.kr/default/05/01.php"
+  },
+  "3b": {
+   "key": "fut-real",
+   "template": null,
+   "board_url": "https://real.mju.ac.kr/default/05/01.php"
+  },
+  "3c": {
+   "key": "future",
+   "template": null,
+   "board_url": "https://future.mju.ac.kr/bbs/board.php"
+  },
+  "3d": {
+   "key": "humanrights",
+   "template": "https://www.mju.ac.kr/bbs/humanrights/1302/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "3e": {
+   "key": "innov",
+   "template": "https://www.mju.ac.kr/bbs/innovation/56/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "3f": {
+   "key": "intern",
+   "template": null,
+   "board_url": "https://intern.mju.ac.kr/user/Board/comm_notice_view.do"
+  },
+  "3g": {
+   "key": "international",
+   "template": null,
+   "board_url": "https://international.mju.ac.kr/notice/view.php"
+  },
+  "3h": {
+   "key": "job-mju",
+   "template": null,
+   "board_url": null
+  },
+  "3i": {
+   "key": "lib",
+   "template": null,
+   "board_url": "https://lib.mju.ac.kr/guide/bulletin/notice/28404"
+  },
+  "3j": {
+   "key": "mjuecon",
+   "template": null,
+   "board_url": "https://www.mjuecon.org/post/%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EA%B8%88%EC%9C%B5%EC%84%9C%EB%B9%84%EC%8A%A4-tams-%EA%B8%80%EB%A1%9C%EB%B2%8C%EA%B8%88%EC%9C%B5%EC%9D%B8%EC%96%91%EC%84%B1%EA%B3%BC%EC%A0%95-15%EA%B8%B0-%EB%AA%A8%EC%A7%91"
+  },
+  "3k": {
+   "key": "mjujob",
+   "template": null,
+   "board_url": "https://www.mjujob.ac.kr/board/read.jsp"
+  },
+  "3l": {
+   "key": "mjukr-255",
+   "template": "https://www.mju.ac.kr/bbs/mjukr/141/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "3m": {
+   "key": "mjukr-256",
+   "template": null,
+   "board_url": null
+  },
+  "3n": {
+   "key": "mjukr-257",
+   "template": "https://www.mju.ac.kr/bbs/mjukr/143/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "3o": {
+   "key": "mjukr-259",
+   "template": "https://www.mju.ac.kr/bbs/mjukr/145/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "3p": {
+   "key": "mjukr-260",
+   "template": "https://www.mju.ac.kr/bbs/mjukr/146/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "3q": {
+   "key": "mjukr-261",
+   "template": "https://www.mju.ac.kr/bbs/mjukr/147/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "3r": {
+   "key": "mjukr-4450",
+   "template": "https://www.mju.ac.kr/bbs/mjukr/644/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "3s": {
+   "key": "mjukr-5364",
+   "template": "https://www.mju.ac.kr/bbs/mjukr/853/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "3t": {
+   "key": "mjukr-8972",
+   "template": "https://www.mju.ac.kr/bbs/mjukr/1342/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "3u": {
+   "key": "mjupsc",
+   "template": "https://www.mju.ac.kr/bbs/mjupsc/1431/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "3v": {
+   "key": "naver-blog",
+   "template": null,
+   "board_url": null
+  },
+  "3w": {
+   "key": "naver-cafe-law",
+   "template": null,
+   "board_url": null
+  },
+  "3x": {
+   "key": "ngscc",
+   "template": null,
+   "board_url": null
+  },
+  "3y": {
+   "key": "sangdam",
+   "template": null,
+   "board_url": null
+  },
+  "3z": {
+   "key": "seoul-youth",
+   "template": null,
+   "board_url": null
+  },
+  "40": {
+   "key": "startup",
+   "template": "https://www.mju.ac.kr/bbs/startup/565/{artcl}/artclView.do",
+   "board_url": null
+  },
+  "41": {
+   "key": "youtube",
+   "template": null,
+   "board_url": null
+  }
+ },
+ "tags": {
+  "ac": "academics",
+  "sc": "scholarship",
+  "ca": "career",
+  "co": "contest",
+  "ev": "events",
+  "li": "life",
+  "jo": "jobs_on_campus",
+  "ad": "admin",
+  "pr": "procurement",
+  "mi": "mixed"
+ }
+}

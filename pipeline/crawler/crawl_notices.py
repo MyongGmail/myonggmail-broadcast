@@ -41,9 +41,12 @@ from urllib.parse import urljoin, urlparse
 
 BASE = "https://www.mju.ac.kr"
 ALLOWED_HOST = "www.mju.ac.kr"
+# 연락처는 **학교 계정**이다. 크롤러 예절(헌법 2조)상 UA에 연락처를 싣는 것은 옳지만,
+# 그 주소가 개인 메일이면 학교 서버 로그에 개인 식별자가 남는다. v2(mju.json defaults)는
+# 이미 학교 계정을 쓴다 — 두 크롤러가 같은 얼굴로 나가야 한다.
 USER_AGENT = (
     "MyongGmailBot/0.1 (+university notice aggregation, student project; "
-    "contact: canvas0420@naver.com) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+    "contact: canvas0420@mju.ac.kr) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
 )
 REQUEST_DELAY_SEC = 1.2
 TIMEOUT_SEC = 20

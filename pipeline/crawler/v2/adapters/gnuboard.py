@@ -18,7 +18,7 @@ import re
 from datetime import datetime
 
 from ..core.model import make_notice
-from .base import HAVE_BS4, soup, strip_tags, take_detail
+from .base import HAVE_BS4, clean_body, clean_text, soup, take_detail
 
 WR_ID_RE = re.compile(r"[?&;]wr_id=(\d+)")
 PAGE_NUM_RE = re.compile(r"[?&;]page=(\d+)")
@@ -83,7 +83,7 @@ def _parse_list(html, log):
                 continue
             rows.append(
                 (
-                    _clean(strip_tags(inner)),
+                    clean_text(inner),
                     m.group(1),
                     dates[i] if i < len(dates) else None,
                     None,
@@ -113,7 +113,7 @@ def _fetch_detail(client, url, log):
     if body is None:  # 폴백: 본문 블록을 정규식으로 절단
         m = BODY_RE.search(html)
         if m:
-            body = strip_tags(m.group(1))
+            body = clean_body(m.group(1))
     return body, attachments
 
 

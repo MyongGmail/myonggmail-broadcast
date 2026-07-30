@@ -21,6 +21,7 @@ ctx (dict):
 
 from __future__ import annotations
 
+import html as html_mod
 import re
 
 try:
@@ -40,7 +41,33 @@ def soup(html):
 
 
 def strip_tags(html):
+    """태그만 지운다 — **엔티티는 그대로 남는다**(`&lt;` → `&lt;`).
+
+    ⚠️ 이걸 단독으로 쓰면 제목에 `&lt;`·`&amp;`가 그대로 실린다. bs4의 `get_text()`는
+    엔티티를 풀어 주므로 bs4 경로와 폴백 경로의 출력이 **말없이 달라진다** — bs4가 설치돼
+    있으면 안 보이고 없으면 파손된다. 2026-07-28 인구조사가 정확히 그 상태로 돌았다
+    (제목 442건 파손). 평문이 필요하면 `clean_text()`를 쓴다.
+    """
     return TAG_RE.sub(" ", html or "")
+
+
+def clean_text(raw):
+    """HTML 조각 → 평문. 태그 제거 → **엔티티 복원** → 공백 정리.
+
+    순서가 중요하다. 엔티티를 먼저 풀면 본문의 `&lt;script&gt;` 같은 문자열이 진짜 태그가
+    되어 TAG_RE에 지워진다. 그리고 길이 제한은 **이 함수 뒤에** 걸어야 한다 — 앞에 걸면
+    `&gt;`가 `&g`로 잘려 복원 불가능한 쓰레기가 남는다(코퍼스에 실제 사례 존재).
+    """
+    return re.sub(r"\s+", " ", html_mod.unescape(strip_tags(raw))).strip()
+
+
+def clean_body(raw):
+    """본문용 — 태그 제거 + 엔티티 복원까지만 하고 **공백은 접지 않는다**.
+
+    제목과 다른 이유: bs4 경로가 `get_text("\\n")`으로 문단 구분을 개행에 담는다.
+    여기서 `\\s+`를 접으면 폴백 경로만 문단이 사라져, 또 한 번 두 경로의 출력이 갈린다.
+    """
+    return html_mod.unescape(strip_tags(raw))
 
 
 def take_detail(ctx):
